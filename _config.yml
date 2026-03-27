@@ -1,0 +1,25 @@
+title: "ArchXAI D.2.1.1"
+description: "Technology comparison blog for ArchXAI Deliverable 2.1.1."
+url: "https://archxai.github.io"
+baseurl: ""
+lang: en
+timezone: Europe/Tallinn
+markdown: kramdown
+permalink: /updates/:title/
+future: false
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

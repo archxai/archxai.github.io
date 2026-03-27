@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap");
+
+:root {
+  --paper: #f5efe3;
+  --ink: #1d302a;
+  --muted: #56675f;
+  --line: rgba(29, 48, 42, 0.12);
+  --accent: #b44f2f;
+  --accent-soft: #e89e62;
+  --pine: #29463e;
+  --card: rgba(255, 252, 246, 0.88);
+  --shadow: 0 24px 60px rgba(39, 52, 46, 0.12);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top right, rgba(232, 158, 98, 0.22), transparent 28rem),
+    radial-gradient(circle at left 20%, rgba(41, 70, 62, 0.14), transparent 26rem),
+    linear-gradient(180deg, #f6f1e7 0%, #efe6d6 100%);
+  font: 400 18px/1.65 "Newsreader", Georgia, serif;
+}
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(41, 70, 62, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(41, 70, 62, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 80%);
+}
+
+.page-shell {
+  position: relative;
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.25rem 0 4rem;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0 1.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-kicker,
+.eyebrow,
+.post-kicker,
+.chip {
+  font: 700 0.82rem/1.2 "Space Grotesk", "Segoe UI", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-kicker,
+.eyebrow,
+.post-kicker {
+  color: var(--accent);
+}
+
+.brand-title {
+  font: 700 1.2rem/1.1 "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(29, 48, 42, 0.08);
+  font: 500 0.95rem/1 "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.site-nav a[aria-current="page"],
+.site-nav a:hover,
+.button:hover,
+.post-card:hover {
+  transform: translateY(-1px);
+  transition: 180ms ease;
+  box-shadow: 0 10px 24px rgba(29, 48, 42, 0.08);
+}
+
+.site-main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero,
+.panel,
+.post-page,
+.post-card,
+.track-card {
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero,
+.panel,
+.post-page {
+  padding: clamp(1.5rem, 3vw, 3rem);
+}
+
+.hero h1,
+.post-page h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  max-width: 12ch;
+}
+
+.hero p,
+.lede {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.action-row,
+.stats-grid,
+.post-grid,
+.track-grid,
+.callout-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.action-row {
+  grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font: 600 0.95rem/1 "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.button-primary {
+  color: #fff9f2;
+  background: linear-gradient(135deg, var(--accent), #8c3b23);
+}
+
+.button-secondary {
+  color: var(--ink);
+  background: rgba(41, 70, 62, 0.08);
+  border-color: rgba(41, 70, 62, 0.12);
+}
+
+.stats-grid,
+.callout-grid,
+.track-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stat-card,
+.callout-card,
+.track-card,
+.post-card {
+  padding: 1.35rem;
+}
+
+.stat-card h3,
+.callout-card h3,
+.track-card h3,
+.post-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.stat-card p,
+.callout-card p,
+.track-card p,
+.post-card p,
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.post-grid {
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.post-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card .chip {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  color: var(--pine);
+  background: rgba(41, 70, 62, 0.09);
+}
+
+.post-card .post-meta {
+  margin-top: 1rem;
+  font: 600 0.92rem/1 "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+}
+
+.post-page > * + *,
+.post-content > * + *,
+.panel > * + * {
+  margin-top: 1rem;
+}
+
+.post-content table,
+.panel table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+.post-content th,
+.post-content td,
+.panel th,
+.panel td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.post-content code,
+.panel code,
+.hero code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.35rem;
+  background: rgba(41, 70, 62, 0.08);
+  font-size: 0.9em;
+}
+
+.post-content pre code,
+.panel pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.site-footer {
+  padding: 2rem 0 0;
+}
+
+.site-footer-meta {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 17px;
+  }
+
+  .page-shell {
+    width: min(100% - 1rem, 1100px);
+  }
+
+  .site-header {
+    padding-top: 0.5rem;
+  }
+
+  .section-title {
+    display: block;
+  }
+}
