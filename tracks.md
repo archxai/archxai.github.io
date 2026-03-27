@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Technology Tracks
-description: Current and planned technology tracks for the D.2.1.1 Pages site.
+title: Current Topics
+description: Current and planned ArchXAI topics covered on this site.
 permalink: /tracks/
 ---
 
 <section class="panel">
   <p class="eyebrow">Technology landscape</p>
-  <h1>Current and planned tracks</h1>
-  <p class="lede">The original deliverable outline covers several model families. The current Pages site publishes the sections that already have usable evidence in the workspace and keeps the rest visible as upcoming comparison tracks.</p>
+  <h1>Current and planned topics</h1>
+  <p class="lede">This site publishes the parts of the ArchXAI comparison work that already have useful evidence behind them, while keeping the next planned topics visible.</p>
 </section>
 
 <section class="panel">

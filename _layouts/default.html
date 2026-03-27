@@ -19,7 +19,7 @@
       <header class="site-header">
         <a class="brand" href="{{ '/' | relative_url }}">
           <span class="brand-kicker">ArchXAI</span>
-          <span class="brand-title">Deliverable D.2.1.1</span>
+          <span class="brand-title">Technology updates</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
           {% for item in site.data.navigation %}
@@ -37,8 +37,21 @@
       </main>
 
       <footer class="site-footer">
-        <p>Continuous web publication for the ArchXAI technology comparison work. Built for GitHub Pages.</p>
-        <p class="site-footer-meta">Project: AI enhanced cross-border archives (CB0600307)</p>
+        <div class="footer-grid">
+          <div>
+            <p class="site-footer-heading">ArchXAI</p>
+            <p>Public notes on how the project tests AI tools for archive access, indexing, search, and safe release workflows.</p>
+            <p class="site-footer-meta">Project: AI enhanced cross-border archives (CB0600307)</p>
+          </div>
+          <div>
+            <p class="site-footer-heading">Project resources</p>
+            <ul class="footer-links">
+              <li><a href="https://centralbaltic.eu/project/archxai/" target="_blank" rel="noopener">Central Baltic project page</a></li>
+              <li><a href="https://huggingface.co/archxai-project" target="_blank" rel="noopener">Hugging Face</a></li>
+              <li><a href="https://github.com/archxai" target="_blank" rel="noopener">GitHub organization</a></li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
   </body>
