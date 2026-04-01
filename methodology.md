@@ -13,7 +13,7 @@ permalink: /methodology/
       <p class="lede">We do not judge AI tools only by how impressive they sound. We compare them by how accurate they are, how fast they are, and whether they can realistically fit into archive workflows.</p>
     </div>
     <div class="media-frame">
-      <img class="content-illustration" src="{{ '/assets/images/metrics-explainer.svg' | relative_url }}" alt="Illustration explaining precision, recall, and F1 in plain language">
+      <img class="content-illustration" src="{{ '/assets/images/metrics-explainer.png' | relative_url }}" alt="Illustration explaining precision, recall, and F1 in plain language">
     </div>
   </div>
 </section>

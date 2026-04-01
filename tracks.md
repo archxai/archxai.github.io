@@ -13,7 +13,7 @@ permalink: /tracks/
       <p class="lede">This site publishes the parts of the ArchXAI comparison work that already have useful evidence behind them, while keeping the next planned topics visible.</p>
     </div>
     <div class="media-frame">
-      <img class="content-illustration" src="{{ '/assets/images/topics-overview.svg' | relative_url }}" alt="Illustration of current and planned ArchXAI technology topics">
+      <img class="content-illustration" src="{{ '/assets/images/topics-overview.png' | relative_url }}" alt="Illustration of current and planned ArchXAI technology topics">
     </div>
   </div>
 </section>

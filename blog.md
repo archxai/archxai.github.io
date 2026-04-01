@@ -13,7 +13,7 @@ permalink: /blog/
       <p class="lede">This page collects the benchmark notes and project updates published on the site. Newest entries appear first so it is easy to follow what was tested most recently.</p>
     </div>
     <div class="media-frame">
-      <img class="content-illustration" src="{{ '/assets/images/topics-overview.svg' | relative_url }}" alt="Illustration of current and planned ArchXAI topic areas">
+      <img class="content-illustration" src="{{ '/assets/images/topics-overview.png' | relative_url }}" alt="Illustration of current and planned ArchXAI topic areas">
     </div>
   </div>
 </section>
