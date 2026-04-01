@@ -100,25 +100,18 @@ permalink: /
       <p>The ArchXAI consortium brings together applied research and national archival institutions from Finland, Estonia, and Latvia.</p>
     </div>
   </div>
-  <div class="logo-frame">
-    <img class="partner-strip" src="{{ '/assets/images/partners-strip.png' | relative_url }}" alt="Project partner logos: Xamk, National Archives of Finland, National Archives of Estonia, and National Archives of Latvia">
-  </div>
-  <div class="resource-grid">
-    <a class="resource-card" href="https://www.xamk.fi/en/" target="_blank" rel="noopener">
-      <h3>Xamk</h3>
-      <p>South-Eastern Finland University of Applied Sciences.</p>
+  <div class="partner-logo-grid">
+    <a class="partner-logo-link" href="https://www.xamk.fi/en/" target="_blank" rel="noopener" aria-label="Xamk">
+      <img src="{{ '/assets/images/partners/xamk.png' | relative_url }}" alt="Xamk logo">
     </a>
-    <a class="resource-card" href="https://kansallisarkisto.fi/en/frontpage" target="_blank" rel="noopener">
-      <h3>National Archives of Finland</h3>
-      <p>Project partner working on archival access and review use cases.</p>
+    <a class="partner-logo-link" href="https://kansallisarkisto.fi/en/frontpage" target="_blank" rel="noopener" aria-label="National Archives of Finland">
+      <img src="{{ '/assets/images/partners/naf.png' | relative_url }}" alt="National Archives of Finland logo">
     </a>
-    <a class="resource-card" href="https://www.ra.ee/en/" target="_blank" rel="noopener">
-      <h3>National Archives of Estonia</h3>
-      <p>Project partner contributing archival collections and use cases.</p>
+    <a class="partner-logo-link" href="https://www.ra.ee/en/" target="_blank" rel="noopener" aria-label="National Archives of Estonia">
+      <img src="{{ '/assets/images/partners/nae.png' | relative_url }}" alt="National Archives of Estonia logo">
     </a>
-    <a class="resource-card" href="https://www.arhivi.gov.lv/en" target="_blank" rel="noopener">
-      <h3>National Archives of Latvia</h3>
-      <p>Project partner supporting multilingual and cross-border development.</p>
+    <a class="partner-logo-link" href="https://www.arhivi.gov.lv/en" target="_blank" rel="noopener" aria-label="National Archives of Latvia">
+      <img src="{{ '/assets/images/partners/nal.png' | relative_url }}" alt="National Archives of Latvia logo">
     </a>
   </div>
 </section>
@@ -129,16 +122,17 @@ permalink: /
       <h2>Recent benchmark notes</h2>
       <p>Short updates about what has been tested and what the current results suggest.</p>
     </div>
+    <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse blog</a>
   </div>
   <div class="post-grid">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:3 %}
       <a class="post-card" href="{{ post.url | relative_url }}">
         {% if post.track %}
           <span class="chip">{{ post.track }}</span>
         {% endif %}
         <h3>{{ post.title }}</h3>
         <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 }}</p>
-        <p class="post-meta">Open update</p>
+        <p class="post-meta">{{ post.date | date: "%d %B %Y" }}</p>
       </a>
     {% endfor %}
   </div>

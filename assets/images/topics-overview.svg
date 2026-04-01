@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">ArchXAI topic overview illustration</title>
+  <desc id="desc">A grid of six cards representing published and planned ArchXAI benchmark topics, including named entities, sensitive data, text classification, semantic search, image classification, and large language models.</desc>
+  <rect width="960" height="420" rx="28" fill="#fffaf2"/>
+  <g font-family="Space Grotesk, Segoe UI, sans-serif">
+    <text x="48" y="58" font-size="18" fill="#b44f2f" letter-spacing="2.5">ARCHXAI TOPICS</text>
+    <text x="48" y="98" font-size="42" font-weight="700" fill="#1d302a">What we are testing now and next</text>
+  </g>
+
+  <g transform="translate(48 132)">
+    <g transform="translate(0 0)">
+      <rect width="270" height="108" rx="22" fill="#fff" stroke="#e9ddcb"/>
+      <rect x="18" y="16" width="86" height="26" rx="13" fill="#29463e"/>
+      <text x="61" y="34" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fff">PUBLISHED</text>
+      <text x="18" y="68" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1d302a">Names and places</text>
+      <text x="18" y="92" font-family="Newsreader, Georgia, serif" font-size="20" fill="#56675f">Named Entity Recognition</text>
+    </g>
+    <g transform="translate(297 0)">
+      <rect width="270" height="108" rx="22" fill="#fff" stroke="#e9ddcb"/>
+      <rect x="18" y="16" width="86" height="26" rx="13" fill="#29463e"/>
+      <text x="61" y="34" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fff">PUBLISHED</text>
+      <text x="18" y="68" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1d302a">Sensitive data</text>
+      <text x="18" y="92" font-family="Newsreader, Georgia, serif" font-size="20" fill="#56675f">PII and anonymization</text>
+    </g>
+    <g transform="translate(594 0)">
+      <rect width="270" height="108" rx="22" fill="#fff" stroke="#e9ddcb"/>
+      <rect x="18" y="16" width="74" height="26" rx="13" fill="#b44f2f"/>
+      <text x="55" y="34" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fff">PLANNED</text>
+      <text x="18" y="68" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1d302a">Text signals</text>
+      <text x="18" y="92" font-family="Newsreader, Georgia, serif" font-size="20" fill="#56675f">Classification and tone</text>
+    </g>
+
+    <g transform="translate(0 136)">
+      <rect width="270" height="108" rx="22" fill="#fff" stroke="#e9ddcb"/>
+      <rect x="18" y="16" width="74" height="26" rx="13" fill="#b44f2f"/>
+      <text x="55" y="34" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fff">PLANNED</text>
+      <text x="18" y="68" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1d302a">Search meaning</text>
+      <text x="18" y="92" font-family="Newsreader, Georgia, serif" font-size="20" fill="#56675f">Semantic retrieval</text>
+    </g>
+    <g transform="translate(297 136)">
+      <rect width="270" height="108" rx="22" fill="#fff" stroke="#e9ddcb"/>
+      <rect x="18" y="16" width="74" height="26" rx="13" fill="#b44f2f"/>
+      <text x="55" y="34" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fff">PLANNED</text>
+      <text x="18" y="68" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1d302a">Images</text>
+      <text x="18" y="92" font-family="Newsreader, Georgia, serif" font-size="20" fill="#56675f">Visual classification</text>
+    </g>
+    <g transform="translate(594 136)">
+      <rect width="270" height="108" rx="22" fill="#fff" stroke="#e9ddcb"/>
+      <rect x="18" y="16" width="74" height="26" rx="13" fill="#b44f2f"/>
+      <text x="55" y="34" text-anchor="middle" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#fff">PLANNED</text>
+      <text x="18" y="68" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1d302a">LLMs</text>
+      <text x="18" y="92" font-family="Newsreader, Georgia, serif" font-size="20" fill="#56675f">Language and multimodal models</text>
+    </g>
+  </g>
+</svg>

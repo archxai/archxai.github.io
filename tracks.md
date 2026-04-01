@@ -6,9 +6,16 @@ permalink: /tracks/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Technology landscape</p>
-  <h1>Current and planned topics</h1>
-  <p class="lede">This site publishes the parts of the ArchXAI comparison work that already have useful evidence behind them, while keeping the next planned topics visible.</p>
+  <div class="intro-grid">
+    <div>
+      <p class="eyebrow">Technology landscape</p>
+      <h1>Current and planned topics</h1>
+      <p class="lede">This site publishes the parts of the ArchXAI comparison work that already have useful evidence behind them, while keeping the next planned topics visible.</p>
+    </div>
+    <div class="media-frame">
+      <img class="content-illustration" src="{{ '/assets/images/topics-overview.svg' | relative_url }}" alt="Illustration of current and planned ArchXAI technology topics">
+    </div>
+  </div>
 </section>
 
 <section class="panel">

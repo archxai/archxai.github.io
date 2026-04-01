@@ -6,27 +6,20 @@ permalink: /methodology/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Evaluation logic</p>
-  <h1>How we compare tools</h1>
-  <p class="lede">We do not judge AI tools only by how impressive they sound. We compare them by how accurate they are, how fast they are, and whether they can realistically fit into archive workflows.</p>
+  <div class="intro-grid">
+    <div>
+      <p class="eyebrow">Evaluation logic</p>
+      <h1>How we compare tools</h1>
+      <p class="lede">We do not judge AI tools only by how impressive they sound. We compare them by how accurate they are, how fast they are, and whether they can realistically fit into archive workflows.</p>
+    </div>
+    <div class="media-frame">
+      <img class="content-illustration" src="{{ '/assets/images/metrics-explainer.svg' | relative_url }}" alt="Illustration explaining precision, recall, and F1 in plain language">
+    </div>
+  </div>
 </section>
 
 <section class="panel">
   <h2>A plain-language guide to the main metrics</h2>
-  <div class="callout-grid">
-    <div class="callout-card">
-      <h3>Precision</h3>
-      <p>When the system flags something as important, how often is it actually correct? High precision means fewer false alarms.</p>
-    </div>
-    <div class="callout-card">
-      <h3>Recall</h3>
-      <p>Out of all the important things that were really there, how many did the system manage to find? High recall means fewer misses.</p>
-    </div>
-    <div class="callout-card">
-      <h3>F1</h3>
-      <p>A single score that rewards tools only when both precision and recall are strong. It is a quick way to see overall balance.</p>
-    </div>
-  </div>
   <p>Simple example: if a tool highlights ten names and eight are real names, precision is eight out of ten. If there were twelve real names in the text and the tool found eight of them, recall is eight out of twelve.</p>
 </section>
 
@@ -43,6 +36,9 @@ permalink: /methodology/
   <h2>Operational constraints</h2>
   <p>The current benchmarking environment is described as a system centered on an NVIDIA GB10 chip, which in practice limits routine evaluation to models that fit within approximately 128 GB RAM. That matters because some large language models may be interesting experimentally but remain impractical for widespread operational deployment.</p>
   <p>The comparison therefore treats transformer pipelines as the default high-throughput baseline and LLM-based methods as complementary: useful for fallback cases, targeted enrichment, or rapid experimentation where dedicated task models are weak or unavailable.</p>
+  <div class="media-frame">
+    <img class="content-illustration" src="{{ '/assets/images/hardware-gb10.png' | relative_url }}" alt="Illustration of the GB10-based evaluation hardware used for local benchmarking">
+  </div>
 </section>
 
 <section class="panel">

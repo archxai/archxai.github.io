@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" role="img" aria-labelledby="title desc">
+  <title id="title">Precision, recall, and F1 illustration</title>
+  <desc id="desc">Three illustrated cards showing that precision means being correct when the system flags something, recall means finding what matters, and F1 rewards balance between the two.</desc>
+  <rect width="960" height="380" rx="28" fill="#fffaf2"/>
+  <g font-family="Space Grotesk, Segoe UI, sans-serif">
+    <text x="48" y="62" font-size="18" fill="#b44f2f" letter-spacing="2.5">PLAIN LANGUAGE GUIDE</text>
+    <text x="48" y="104" font-size="44" font-weight="700" fill="#1d302a">How we read the main scores</text>
+  </g>
+
+  <g transform="translate(48 136)">
+    <rect width="270" height="196" rx="24" fill="#fff" stroke="#e9ddcb"/>
+    <text x="28" y="42" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1d302a">Precision</text>
+    <text x="28" y="69" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="16" fill="#56675f">Correct when it flags</text>
+    <rect x="28" y="92" width="214" height="72" rx="18" fill="#f6f1e7" stroke="#eadfce"/>
+    <circle cx="63" cy="128" r="13" fill="#29463e"/>
+    <circle cx="98" cy="128" r="13" fill="#29463e"/>
+    <circle cx="133" cy="128" r="13" fill="#29463e"/>
+    <circle cx="168" cy="128" r="13" fill="#29463e"/>
+    <circle cx="203" cy="128" r="13" fill="#b44f2f"/>
+    <circle cx="238" cy="128" r="13" fill="#b44f2f"/>
+    <text x="28" y="186" font-family="Newsreader, Georgia, serif" font-size="22" fill="#56675f">Fewer false alarms.</text>
+  </g>
+
+  <g transform="translate(345 136)">
+    <rect width="270" height="196" rx="24" fill="#fff" stroke="#e9ddcb"/>
+    <text x="28" y="42" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1d302a">Recall</text>
+    <text x="28" y="69" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="16" fill="#56675f">Finds what matters</text>
+    <rect x="28" y="92" width="214" height="72" rx="18" fill="#f6f1e7" stroke="#eadfce"/>
+    <circle cx="58" cy="128" r="11" fill="#29463e"/>
+    <circle cx="87" cy="128" r="11" fill="#29463e"/>
+    <circle cx="116" cy="128" r="11" fill="#29463e"/>
+    <circle cx="145" cy="128" r="11" fill="#29463e"/>
+    <circle cx="174" cy="128" r="11" fill="#29463e"/>
+    <circle cx="203" cy="128" r="11" fill="#29463e"/>
+    <circle cx="232" cy="128" r="11" fill="#d2c6b7"/>
+    <circle cx="58" cy="154" r="11" fill="#d2c6b7"/>
+    <text x="28" y="186" font-family="Newsreader, Georgia, serif" font-size="22" fill="#56675f">Fewer important misses.</text>
+  </g>
+
+  <g transform="translate(642 136)">
+    <rect width="270" height="196" rx="24" fill="#fff" stroke="#e9ddcb"/>
+    <text x="28" y="42" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1d302a">F1</text>
+    <text x="28" y="69" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="16" fill="#56675f">Rewards balance</text>
+    <rect x="28" y="102" width="214" height="18" rx="9" fill="#f1e3d0"/>
+    <rect x="28" y="102" width="146" height="18" rx="9" fill="#29463e"/>
+    <rect x="28" y="136" width="214" height="18" rx="9" fill="#f1e3d0"/>
+    <rect x="28" y="136" width="146" height="18" rx="9" fill="#b44f2f"/>
+    <circle cx="174" cy="111" r="11" fill="#29463e"/>
+    <circle cx="174" cy="145" r="11" fill="#b44f2f"/>
+    <text x="28" y="186" font-family="Newsreader, Georgia, serif" font-size="22" fill="#56675f">Strong only when both are strong.</text>
+  </g>
+</svg>

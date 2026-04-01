@@ -6,9 +6,16 @@ permalink: /overview/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Project framing</p>
-  <h1>About ArchXAI</h1>
-  <p class="lede">ArchXAI is a cross-border project exploring how AI can improve archive access, indexing, search, and related public services. This site is the public web version of the project's benchmarking and technology-comparison work.</p>
+  <div class="intro-grid">
+    <div>
+      <p class="eyebrow">Project framing</p>
+      <h1>About ArchXAI</h1>
+      <p class="lede">ArchXAI is a cross-border project exploring how AI can improve archive access, indexing, search, and related public services. This site is the public web version of the project's benchmarking and technology-comparison work.</p>
+    </div>
+    <div class="logo-frame">
+      <img class="content-illustration" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
+    </div>
+  </div>
 </section>
 
 <section class="panel">
