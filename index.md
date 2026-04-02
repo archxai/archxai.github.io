@@ -11,8 +11,6 @@ permalink: /
       <img class="hero-logo" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
     </div>
     <div class="hero-copy">
-      <p class="eyebrow">Cross-border archive innovation</p>
-      <h1>AI tools for better archive access</h1>
       <p>ArchXAI explores how AI can help archives digitize, index, search, and safely review records across languages. This site shares what we are testing, what works well, and where human review still matters.</p>
       <div class="action-row">
         <a class="button button-primary" href="{{ '/overview/' | relative_url }}">About the project</a>
@@ -46,29 +44,6 @@ permalink: /
     <div class="stat-card">
       <h3>Why it stays current</h3>
       <p>AI tools move fast, so this site is updated continuously instead of waiting for a single static report at the end of the process.</p>
-    </div>
-  </div>
-</section>
-
-<section class="panel">
-  <div class="section-title">
-    <div>
-      <h2>Current topics</h2>
-      <p>The strongest material currently available focuses on two practical archive-facing use cases.</p>
-    </div>
-  </div>
-  <div class="callout-grid">
-    <div class="callout-card">
-      <h3>Named Entity Recognition</h3>
-      <p>Can AI reliably spot names of people, places, and organisations in multilingual archival text, and can it do so quickly enough for large-scale indexing?</p>
-    </div>
-    <div class="callout-card">
-      <h3>PII Detection and Anonymization</h3>
-      <p>Can AI help identify sensitive information before material is released or opened more widely for research and public use?</p>
-    </div>
-    <div class="callout-card">
-      <h3>How we judge the tools</h3>
-      <p>We look at accuracy, speed, and how realistic each method is to integrate into archive workflows. The plain-language explanation is on the methodology page.</p>
     </div>
   </div>
 </section>
