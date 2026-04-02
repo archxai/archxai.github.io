@@ -156,6 +156,17 @@ h3 {
   max-width: 12ch;
 }
 
+.hero-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+}
+
+.hero-copy > * + * {
+  margin-top: 1rem;
+}
+
 .hero p,
 .lede {
   font-size: 1.2rem;
@@ -182,7 +193,7 @@ h3 {
 }
 
 .hero-logo {
-  width: min(560px, 100%);
+  width: min(430px, 100%);
 }
 
 .partner-strip {
@@ -222,7 +233,14 @@ h3 {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+.resource-logo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 .partner-logo-link,
+.resource-logo-link,
 .blog-card {
   display: flex;
   align-items: center;
@@ -238,6 +256,7 @@ h3 {
 }
 
 .partner-logo-link:hover,
+.resource-logo-link:hover,
 .blog-card:hover {
   transform: translateY(-1px);
   transition: 180ms ease;
@@ -249,6 +268,14 @@ h3 {
   width: auto;
   max-width: 100%;
   max-height: 108px;
+  height: auto;
+}
+
+.resource-logo-link img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 82px;
   height: auto;
 }
 
@@ -492,6 +519,10 @@ h3 {
   }
 
   .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
     grid-template-columns: 1fr;
   }
 }

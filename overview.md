@@ -6,16 +6,9 @@ permalink: /overview/
 ---
 
 <section class="panel">
-  <div class="intro-grid">
-    <div>
-      <p class="eyebrow">Project framing</p>
-      <h1>About ArchXAI</h1>
-      <p class="lede">ArchXAI is a cross-border project exploring how AI can improve archive access, indexing, search, and related public services. This site is the public web version of the project's benchmarking and technology-comparison work.</p>
-    </div>
-    <div class="logo-frame">
-      <img class="content-illustration" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
-    </div>
-  </div>
+  <p class="eyebrow">Project framing</p>
+  <h1>About ArchXAI</h1>
+  <p class="lede">ArchXAI is a cross-border project exploring how AI can improve archive access, indexing, search, and related public services. This site is the public web version of the project's benchmarking and technology-comparison work.</p>
 </section>
 
 <section class="panel">
@@ -38,22 +31,22 @@ permalink: /overview/
       <tr>
         <td>South-Eastern Finland University of Applied Sciences</td>
         <td>Lead partner</td>
-        <td>Finland</td>
+        <td>🇫🇮 Finland</td>
       </tr>
       <tr>
         <td>The National Archives of Finland</td>
         <td>Project partner</td>
-        <td>Finland</td>
+        <td>🇫🇮 Finland</td>
       </tr>
       <tr>
         <td>National Archives of Estonia</td>
         <td>Project partner</td>
-        <td>Estonia</td>
+        <td>🇪🇪 Estonia</td>
       </tr>
       <tr>
         <td>The National Archives of Latvia</td>
         <td>Project partner</td>
-        <td>Latvia</td>
+        <td>🇱🇻 Latvia</td>
       </tr>
     </tbody>
   </table>
@@ -79,18 +72,15 @@ permalink: /overview/
 
 <section class="panel">
   <h2>Where to follow the project</h2>
-  <div class="resource-grid">
-    <a class="resource-card" href="https://centralbaltic.eu/project/archxai/" target="_blank" rel="noopener">
-      <h3>Central Baltic project page</h3>
-      <p>Programme page with the broader public project description.</p>
+  <div class="resource-logo-grid">
+    <a class="resource-logo-link" href="https://centralbaltic.eu/project/archxai/" target="_blank" rel="noopener" aria-label="Central Baltic project page">
+      <img src="{{ '/assets/images/resources/central-baltic.png' | relative_url }}" alt="Interreg Central Baltic Programme logo">
     </a>
-    <a class="resource-card" href="https://huggingface.co/archxai-project" target="_blank" rel="noopener">
-      <h3>Hugging Face</h3>
-      <p>Project account for models and related machine learning assets.</p>
+    <a class="resource-logo-link" href="https://huggingface.co/archxai-project" target="_blank" rel="noopener" aria-label="Hugging Face">
+      <img src="{{ '/assets/images/resources/huggingface.png' | relative_url }}" alt="Hugging Face logo">
     </a>
-    <a class="resource-card" href="https://github.com/archxai" target="_blank" rel="noopener">
-      <h3>GitHub organization</h3>
-      <p>Open code, repositories, and development-facing project resources.</p>
+    <a class="resource-logo-link" href="https://github.com/archxai" target="_blank" rel="noopener" aria-label="GitHub organization">
+      <img src="{{ '/assets/images/resources/github.png' | relative_url }}" alt="GitHub logo">
     </a>
   </div>
 </section>

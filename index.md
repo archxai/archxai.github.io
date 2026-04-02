@@ -6,17 +6,20 @@ permalink: /
 ---
 
 <section class="hero">
-  <div class="logo-frame">
-    <img class="hero-logo" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
-  </div>
-  <p class="eyebrow">Cross-border archive innovation</p>
-  <h1>AI tools for better archive access</h1>
-  <p>ArchXAI explores how AI can help archives digitize, index, search, and safely review records across languages. This site shares what we are testing, what works well, and where human review still matters.</p>
-  <div class="action-row">
-    <a class="button button-primary" href="{{ '/overview/' | relative_url }}">About the project</a>
-    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
-    <a class="button button-secondary" href="https://centralbaltic.eu/project/archxai/" target="_blank" rel="noopener">Project page</a>
-    <a class="button button-secondary" href="https://huggingface.co/archxai-project" target="_blank" rel="noopener">Hugging Face</a>
+  <div class="hero-grid">
+    <div class="logo-frame">
+      <img class="hero-logo" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Cross-border archive innovation</p>
+      <h1>AI tools for better archive access</h1>
+      <p>ArchXAI explores how AI can help archives digitize, index, search, and safely review records across languages. This site shares what we are testing, what works well, and where human review still matters.</p>
+      <div class="action-row">
+        <a class="button button-primary" href="{{ '/overview/' | relative_url }}">About the project</a>
+        <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
+        <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Benchmark blog</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -77,18 +80,15 @@ permalink: /
       <p>Follow the wider project, open models, and code outside this site.</p>
     </div>
   </div>
-  <div class="resource-grid">
-    <a class="resource-card" href="https://centralbaltic.eu/project/archxai/" target="_blank" rel="noopener">
-      <h3>Central Baltic project page</h3>
-      <p>Public programme page for the ArchXAI project.</p>
+  <div class="resource-logo-grid">
+    <a class="resource-logo-link" href="https://centralbaltic.eu/project/archxai/" target="_blank" rel="noopener" aria-label="Central Baltic project page">
+      <img src="{{ '/assets/images/resources/central-baltic.png' | relative_url }}" alt="Interreg Central Baltic Programme logo">
     </a>
-    <a class="resource-card" href="https://huggingface.co/archxai-project" target="_blank" rel="noopener">
-      <h3>Hugging Face</h3>
-      <p>Models and related resources published under the project account.</p>
+    <a class="resource-logo-link" href="https://huggingface.co/archxai-project" target="_blank" rel="noopener" aria-label="Hugging Face">
+      <img src="{{ '/assets/images/resources/huggingface.png' | relative_url }}" alt="Hugging Face logo">
     </a>
-    <a class="resource-card" href="https://github.com/archxai" target="_blank" rel="noopener">
-      <h3>GitHub organization</h3>
-      <p>Code repositories, documentation, and the wider project workspace.</p>
+    <a class="resource-logo-link" href="https://github.com/archxai" target="_blank" rel="noopener" aria-label="GitHub organization">
+      <img src="{{ '/assets/images/resources/github.png' | relative_url }}" alt="GitHub logo">
     </a>
   </div>
 </section>
