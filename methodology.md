@@ -6,16 +6,9 @@ permalink: /methodology/
 ---
 
 <section class="panel">
-  <div class="intro-grid">
-    <div>
-      <p class="eyebrow">Evaluation logic</p>
-      <h1>How we compare tools</h1>
-      <p class="lede">We do not judge AI tools only by how impressive they sound. We compare them by how accurate they are, how fast they are, and whether they can realistically fit into archive workflows.</p>
-    </div>
-    <div class="media-frame">
-      <img class="content-illustration" src="{{ '/assets/images/metrics-explainer.png' | relative_url }}" alt="Illustration explaining precision, recall, and F1 in plain language">
-    </div>
-  </div>
+  <p class="eyebrow">Evaluation logic</p>
+  <h1>How we compare tools</h1>
+  <p class="lede">We do not judge AI tools only by how impressive they sound. We compare them by how accurate they are, how fast they are, and whether they can realistically fit into archive workflows.</p>
 </section>
 
 <section class="panel">
@@ -53,10 +46,11 @@ permalink: /methodology/
 
 <section class="panel">
   <h2>Current evidence base</h2>
-  <p>The strongest reusable material currently available in the workspace covers two technology tracks:</p>
+  <p>The strongest reusable material currently available in the workspace covers three technology tracks:</p>
   <ul>
-    <li><strong>NER.</strong> Evaluation across modern, historical, and legal-domain datasets with mapped PER, ORG, and LOC labels.</li>
+    <li><strong>NER.</strong> Evaluation across modern, historical, and legal-domain datasets with mapped PER, ORG, and LOC labels, including dedicated transformer models and a secondary LLM comparison.</li>
     <li><strong>PII detection and anonymization.</strong> Operational comparison between Presidio and MAPA on legal-domain multilingual data.</li>
+    <li><strong>Tone and sentiment analysis.</strong> A structured preliminary benchmark note is published, with scored results still pending.</li>
   </ul>
   <p>Additional tracks can be added into the same site structure as benchmarking results stabilize.</p>
 </section>

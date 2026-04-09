@@ -6,16 +6,9 @@ permalink: /tracks/
 ---
 
 <section class="panel">
-  <div class="intro-grid">
-    <div>
-      <p class="eyebrow">Technology landscape</p>
-      <h1>Current and planned topics</h1>
-      <p class="lede">This site publishes the parts of the ArchXAI comparison work that already have useful evidence behind them, while keeping the next planned topics visible.</p>
-    </div>
-    <div class="media-frame">
-      <img class="content-illustration" src="{{ '/assets/images/topics-overview.png' | relative_url }}" alt="Illustration of current and planned ArchXAI technology topics">
-    </div>
-  </div>
+  <p class="eyebrow">Technology landscape</p>
+  <h1>Current and planned topics</h1>
+  <p class="lede">This site publishes the parts of the ArchXAI comparison work that already have useful evidence behind them, while keeping the next planned topics visible.</p>
 </section>
 
 <section class="panel">
@@ -23,7 +16,7 @@ permalink: /tracks/
     <div class="track-card">
       <p class="chip">Published</p>
       <h3>Named Entity Recognition</h3>
-      <p>Best current evidence for transformer and LLM entity extraction in Estonian, Finnish, Latvian, and Russian archival-adjacent text.</p>
+      <p>Best current evidence for dedicated transformer and LLM entity extraction in Estonian, Finnish, Latvian, and Russian archival-adjacent text.</p>
     </div>
     <div class="track-card">
       <p class="chip">Published</p>
@@ -31,9 +24,9 @@ permalink: /tracks/
       <p>Presidio and MAPA comparison with emphasis on legal-domain release-review support workflows.</p>
     </div>
     <div class="track-card">
-      <p class="chip">Planned</p>
+      <p class="chip">Preliminary</p>
       <h3>Text Classification and Tone Analysis</h3>
-      <p>Reserved for future updates when the benchmark design and representative datasets are ready.</p>
+      <p>Initial explanation and benchmark table structure are published; scored results will be added once the out-of-domain evaluation is run.</p>
     </div>
     <div class="track-card">
       <p class="chip">Planned</p>

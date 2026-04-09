@@ -6,16 +6,9 @@ permalink: /blog/
 ---
 
 <section class="panel">
-  <div class="intro-grid">
-    <div>
-      <p class="eyebrow">Publication stream</p>
-      <h1>Benchmark blog</h1>
-      <p class="lede">This page collects the benchmark notes and project updates published on the site. Newest entries appear first so it is easy to follow what was tested most recently.</p>
-    </div>
-    <div class="media-frame">
-      <img class="content-illustration" src="{{ '/assets/images/topics-overview.png' | relative_url }}" alt="Illustration of current and planned ArchXAI topic areas">
-    </div>
-  </div>
+  <p class="eyebrow">Publication stream</p>
+  <h1>Benchmark blog</h1>
+  <p class="lede">This page collects the current ArchXAI benchmark notes in a predictable format. Newest entries appear first, and each note starts with a short explanation before moving to the test scope, result table, interpretation, and next update.</p>
 </section>
 
 <section class="panel">
