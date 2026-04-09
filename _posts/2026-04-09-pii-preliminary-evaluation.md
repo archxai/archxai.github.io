@@ -4,6 +4,11 @@ summary: Presidio is the most practical default integration layer for PII detect
 track: PII
 track_icon: "🔐"
 topics: [pii]
+chips:
+  - icon: "🔐"
+    label: PII
+  - icon: "1️⃣"
+    label: Preliminary
 date: 2026-04-09 06:20:00 +0300
 ---
 

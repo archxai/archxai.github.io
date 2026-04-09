@@ -102,8 +102,16 @@ permalink: /
   <div class="post-grid">
     {% for post in site.posts limit:3 %}
       <a class="post-card" href="{{ post.url | relative_url }}">
-        {% if post.track %}
-          <span class="chip">{% if post.track_icon %}<span class="topic-icon">{{ post.track_icon }}</span> {% endif %}{{ post.track }}</span>
+        {% if post.chips %}
+          <div class="chip-row">
+            {% for chip in post.chips %}
+              <span class="chip">{% if chip.icon %}<span class="topic-icon">{{ chip.icon }}</span> {% endif %}{{ chip.label }}</span>
+            {% endfor %}
+          </div>
+        {% elsif post.track %}
+          <div class="chip-row">
+            <span class="chip">{% if post.track_icon %}<span class="topic-icon">{{ post.track_icon }}</span> {% endif %}{{ post.track }}</span>
+          </div>
         {% endif %}
         <h3>{{ post.title }}</h3>
         <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 }}</p>

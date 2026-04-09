@@ -4,6 +4,13 @@ layout: default
 <article class="post-page">
   <a class="back-link" href="{{ '/blog/' | relative_url }}" data-back-link>&larr; Back to benchmark blog</a>
   <p class="post-kicker">{{ page.date | date: "%d %B %Y" }}</p>
+  {% if page.chips %}
+    <div class="chip-row post-heading-chips">
+      {% for chip in page.chips %}
+        <span class="chip">{% if chip.icon %}<span class="topic-icon">{{ chip.icon }}</span> {% endif %}{{ chip.label }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
   <h1>{{ page.title }}</h1>
   {% if page.summary %}
     <p class="lede">{{ page.summary }}</p>

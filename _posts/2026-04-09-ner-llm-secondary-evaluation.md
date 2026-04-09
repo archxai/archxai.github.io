@@ -4,6 +4,13 @@ summary: LLM-based NER is useful as a fallback and experimentation path, but cur
 track: "NER + LLM"
 track_icon: "🤖"
 topics: [ner, llm]
+chips:
+  - icon: "📇"
+    label: NER
+  - icon: "🤖"
+    label: LLM
+  - icon: "2️⃣"
+    label: Secondary
 date: 2026-04-09 06:00:00 +0300
 ---
 

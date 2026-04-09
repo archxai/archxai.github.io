@@ -4,6 +4,11 @@ summary: Dedicated NER models remain the strongest default for high-throughput a
 track: NER
 track_icon: "📇"
 topics: [ner]
+chips:
+  - icon: "📇"
+    label: NER
+  - icon: "1️⃣"
+    label: Preliminary
 date: 2026-04-09 06:10:00 +0300
 ---
 

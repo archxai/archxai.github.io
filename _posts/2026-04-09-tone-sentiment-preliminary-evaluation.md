@@ -4,6 +4,11 @@ summary: Tone and sentiment analysis may help classify document style or attitud
 track: Tone
 track_icon: "🗣"
 topics: [tone]
+chips:
+  - icon: "🗣"
+    label: Tone
+  - icon: "1️⃣"
+    label: Preliminary
 date: 2026-04-09 06:30:00 +0300
 ---
 
