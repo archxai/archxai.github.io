@@ -13,21 +13,21 @@ permalink: /tracks/
 
 <section class="panel">
   <div class="track-grid">
-    <div class="track-card">
+    <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=ner">
       <p class="chip">Published</p>
       <h3>Named Entity Recognition</h3>
       <p>Best current evidence for dedicated transformer and LLM entity extraction in Estonian, Finnish, Latvian, and Russian archival-adjacent text.</p>
-    </div>
-    <div class="track-card">
+    </a>
+    <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=pii">
       <p class="chip">Published</p>
       <h3>PII Detection and Anonymization</h3>
       <p>Presidio and MAPA comparison with emphasis on legal-domain release-review support workflows.</p>
-    </div>
-    <div class="track-card">
+    </a>
+    <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=tone">
       <p class="chip">Preliminary</p>
       <h3>Text Classification and Tone Analysis</h3>
       <p>Initial explanation and benchmark table structure are published; scored results will be added once the out-of-domain evaluation is run.</p>
-    </div>
+    </a>
     <div class="track-card">
       <p class="chip">Planned</p>
       <h3>Similarity and Semantic Search</h3>

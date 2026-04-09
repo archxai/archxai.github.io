@@ -2,6 +2,7 @@
 title: "Preliminary evaluation: Tone and sentiment analysis"
 summary: Tone and sentiment analysis may help classify document style or attitude, but the current public note is a benchmark structure rather than a scored result.
 track: Tone
+topics: [tone]
 date: 2026-04-09 06:30:00 +0300
 ---
 

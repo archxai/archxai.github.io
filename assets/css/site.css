@@ -265,7 +265,8 @@ h3 {
 
 .partner-logo-link:hover,
 .resource-logo-link:hover,
-.blog-card:hover {
+.blog-card:hover,
+a.track-card:hover {
   transform: translateY(-1px);
   transition: 180ms ease;
   box-shadow: 0 10px 24px rgba(29, 48, 42, 0.08);
@@ -386,9 +387,51 @@ h3 {
   gap: 1rem;
 }
 
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filter-pill,
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.65rem;
+  padding: 0.72rem 1rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: rgba(41, 70, 62, 0.08);
+  border: 1px solid rgba(41, 70, 62, 0.12);
+  border-radius: 999px;
+  font: 600 0.92rem/1 "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.filter-pill[aria-current="true"],
+.back-link:hover,
+.filter-pill:hover {
+  color: #fff9f2;
+  background: linear-gradient(135deg, var(--accent), #8c3b23);
+}
+
+.filter-empty {
+  margin: 0;
+  color: var(--muted);
+}
+
 .post-card {
   text-decoration: none;
   color: inherit;
+}
+
+.track-card {
+  display: block;
+  color: inherit;
+}
+
+a.track-card {
+  text-decoration: none;
 }
 
 .resource-card {

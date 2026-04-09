@@ -15,12 +15,18 @@ permalink: /blog/
   <div class="section-title">
     <div>
       <h2>All posts</h2>
-      <p>Listed in reverse chronological order.</p>
+      <p data-filter-label>Listed in reverse chronological order.</p>
     </div>
+  </div>
+  <div class="filter-row" data-blog-filters aria-label="Filter benchmark posts">
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}" data-filter="all">All posts</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=ner" data-filter="ner">NER</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=pii" data-filter="pii">PII</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=tone" data-filter="tone">Tone and sentiment</a>
   </div>
   <div class="blog-list">
     {% for post in site.posts %}
-      <a class="blog-card" href="{{ post.url | relative_url }}">
+      <a class="blog-card" href="{{ post.url | relative_url }}" data-blog-post data-topics="{{ post.topics | join: ' ' | escape }}">
         <div class="blog-card-header">
           {% if post.track %}
             <span class="chip">{{ post.track }}</span>
@@ -32,4 +38,59 @@ permalink: /blog/
       </a>
     {% endfor %}
   </div>
+  <p class="filter-empty" data-filter-empty hidden>No posts match this topic yet.</p>
 </section>
+
+<script>
+  (() => {
+    const labels = {
+      all: "Listed in reverse chronological order.",
+      ner: "Showing Named Entity Recognition posts in reverse chronological order.",
+      pii: "Showing PII detection posts in reverse chronological order.",
+      tone: "Showing tone and sentiment posts in reverse chronological order."
+    };
+    const params = new URLSearchParams(window.location.search);
+    const topic = (params.get("topic") || "all").toLowerCase();
+    const posts = Array.from(document.querySelectorAll("[data-blog-post]"));
+    const filters = Array.from(document.querySelectorAll("[data-filter]"));
+    const label = document.querySelector("[data-filter-label]");
+    const empty = document.querySelector("[data-filter-empty]");
+
+    function applyFilter(nextTopic) {
+      const activeTopic = labels[nextTopic] ? nextTopic : "all";
+      let visibleCount = 0;
+
+      posts.forEach((post) => {
+        const postTopics = (post.dataset.topics || "").split(/\s+/);
+        const visible = activeTopic === "all" || postTopics.includes(activeTopic);
+        post.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      filters.forEach((filter) => {
+        const active = filter.dataset.filter === activeTopic;
+        filter.setAttribute("aria-current", active ? "true" : "false");
+      });
+
+      if (label) label.textContent = labels[activeTopic];
+      if (empty) empty.hidden = visibleCount > 0;
+    }
+
+    filters.forEach((filter) => {
+      filter.addEventListener("click", (event) => {
+        event.preventDefault();
+        const nextTopic = filter.dataset.filter || "all";
+        const url = nextTopic === "all" ? "{{ '/blog/' | relative_url }}" : "{{ '/blog/' | relative_url }}?topic=" + encodeURIComponent(nextTopic);
+        window.history.pushState({}, "", url);
+        applyFilter(nextTopic);
+      });
+    });
+
+    window.addEventListener("popstate", () => {
+      const nextParams = new URLSearchParams(window.location.search);
+      applyFilter((nextParams.get("topic") || "all").toLowerCase());
+    });
+
+    applyFilter(topic);
+  })();
+</script>
