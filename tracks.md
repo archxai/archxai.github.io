@@ -15,17 +15,17 @@ permalink: /tracks/
   <div class="track-grid">
     <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=ner">
       <p class="chip">Published</p>
-      <h3>Named Entity Recognition</h3>
+      <h3>📇 Named Entity Recognition</h3>
       <p>Best current evidence for dedicated transformer and LLM entity extraction in Estonian, Finnish, Latvian, and Russian archival-adjacent text.</p>
     </a>
     <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=pii">
       <p class="chip">Published</p>
-      <h3>PII Detection and Anonymization</h3>
+      <h3>🔐 PII Detection and Anonymization</h3>
       <p>Presidio and MAPA comparison with emphasis on legal-domain release-review support workflows.</p>
     </a>
     <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=tone">
       <p class="chip">Preliminary</p>
-      <h3>Text Classification and Tone Analysis</h3>
+      <h3>🗣 Tone and Sentiment Analysis</h3>
       <p>Initial explanation and benchmark table structure are published; scored results will be added once the out-of-domain evaluation is run.</p>
     </a>
     <div class="track-card">
@@ -38,11 +38,11 @@ permalink: /tracks/
       <h3>Image Classification</h3>
       <p>Reserved for visual archival classification tasks once the benchmark material is curated.</p>
     </div>
-    <div class="track-card">
-      <p class="chip">Planned</p>
-      <h3>Large Language and Multimodal Models</h3>
-      <p>Reserved for cross-task prompt-based workflows and multimodal archival assistance use cases.</p>
-    </div>
+    <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=llm">
+      <p class="chip">Preliminary</p>
+      <h3>🤖 Large Language and Multimodal Models</h3>
+      <p>Current LLM evidence appears in the secondary NER evaluation; broader multimodal archive assistance remains planned.</p>
+    </a>
   </div>
 </section>
 

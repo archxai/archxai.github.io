@@ -2,6 +2,7 @@
 title: "Preliminary evaluation: NER with dedicated models"
 summary: Dedicated NER models remain the strongest default for high-throughput archive indexing, especially when they are routed by language and text domain.
 track: NER
+track_icon: "📇"
 topics: [ner]
 date: 2026-04-09 06:10:00 +0300
 ---

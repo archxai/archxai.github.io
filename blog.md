@@ -19,17 +19,18 @@ permalink: /blog/
     </div>
   </div>
   <div class="filter-row" data-blog-filters aria-label="Filter benchmark posts">
-    <a class="filter-pill" href="{{ '/blog/' | relative_url }}" data-filter="all">All posts</a>
-    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=ner" data-filter="ner">NER</a>
-    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=pii" data-filter="pii">PII</a>
-    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=tone" data-filter="tone">Tone and sentiment</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}" data-filter="all"><span class="topic-icon">🗂</span> All posts</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=ner" data-filter="ner"><span class="topic-icon">📇</span> NER</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=pii" data-filter="pii"><span class="topic-icon">🔐</span> PII</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=tone" data-filter="tone"><span class="topic-icon">🗣</span> Tone and sentiment</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=llm" data-filter="llm"><span class="topic-icon">🤖</span> LLM</a>
   </div>
   <div class="blog-list">
     {% for post in site.posts %}
       <a class="blog-card" href="{{ post.url | relative_url }}" data-blog-post data-base-href="{{ post.url | relative_url }}" data-topics="{{ post.topics | join: ' ' | escape }}">
         <div class="blog-card-header">
           {% if post.track %}
-            <span class="chip">{{ post.track }}</span>
+            <span class="chip">{% if post.track_icon %}<span class="topic-icon">{{ post.track_icon }}</span> {% endif %}{{ post.track }}</span>
           {% endif %}
           <p class="blog-date">{{ post.date | date: "%d %B %Y" }}</p>
         </div>
@@ -47,7 +48,8 @@ permalink: /blog/
       all: "Listed in reverse chronological order.",
       ner: "Showing Named Entity Recognition posts in reverse chronological order.",
       pii: "Showing PII detection posts in reverse chronological order.",
-      tone: "Showing tone and sentiment posts in reverse chronological order."
+      tone: "Showing tone and sentiment posts in reverse chronological order.",
+      llm: "Showing large language model posts in reverse chronological order."
     };
     const params = new URLSearchParams(window.location.search);
     const topic = (params.get("topic") || "all").toLowerCase();

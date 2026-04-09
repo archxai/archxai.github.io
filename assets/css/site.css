@@ -88,6 +88,12 @@ body {
   background: rgba(41, 70, 62, 0.09);
 }
 
+.topic-icon {
+  display: inline-block;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 .brand-title {
   font: 700 1.2rem/1.1 "Space Grotesk", "Segoe UI", sans-serif;
 }
@@ -403,6 +409,7 @@ a.track-card:hover {
 .back-link {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
   min-height: 2.65rem;
   padding: 0.72rem 1rem;
   color: var(--ink);

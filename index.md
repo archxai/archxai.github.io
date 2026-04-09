@@ -103,7 +103,7 @@ permalink: /
     {% for post in site.posts limit:3 %}
       <a class="post-card" href="{{ post.url | relative_url }}">
         {% if post.track %}
-          <span class="chip">{{ post.track }}</span>
+          <span class="chip">{% if post.track_icon %}<span class="topic-icon">{{ post.track_icon }}</span> {% endif %}{{ post.track }}</span>
         {% endif %}
         <h3>{{ post.title }}</h3>
         <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 }}</p>

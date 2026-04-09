@@ -18,7 +18,8 @@ layout: default
     const labels = {
       ner: "NER posts",
       pii: "PII posts",
-      tone: "tone and sentiment posts"
+      tone: "tone and sentiment posts",
+      llm: "LLM posts"
     };
     const params = new URLSearchParams(window.location.search);
     const topic = (params.get("topic") || "").toLowerCase();
