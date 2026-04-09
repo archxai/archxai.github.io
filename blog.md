@@ -26,7 +26,7 @@ permalink: /blog/
   </div>
   <div class="blog-list">
     {% for post in site.posts %}
-      <a class="blog-card" href="{{ post.url | relative_url }}" data-blog-post data-topics="{{ post.topics | join: ' ' | escape }}">
+      <a class="blog-card" href="{{ post.url | relative_url }}" data-blog-post data-base-href="{{ post.url | relative_url }}" data-topics="{{ post.topics | join: ' ' | escape }}">
         <div class="blog-card-header">
           {% if post.track %}
             <span class="chip">{{ post.track }}</span>
@@ -63,7 +63,9 @@ permalink: /blog/
       posts.forEach((post) => {
         const postTopics = (post.dataset.topics || "").split(/\s+/);
         const visible = activeTopic === "all" || postTopics.includes(activeTopic);
+        const baseHref = post.dataset.baseHref || post.getAttribute("href");
         post.hidden = !visible;
+        post.href = activeTopic === "all" ? baseHref : baseHref + "?topic=" + encodeURIComponent(activeTopic);
         if (visible) visibleCount += 1;
       });
 

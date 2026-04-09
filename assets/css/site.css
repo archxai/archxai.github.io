@@ -387,6 +387,11 @@ a.track-card:hover {
   gap: 1rem;
 }
 
+.blog-card[hidden],
+.filter-empty[hidden] {
+  display: none;
+}
+
 .filter-row {
   display: flex;
   flex-wrap: wrap;

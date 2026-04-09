@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="post-page">
-  <a class="back-link" href="{{ '/blog/' | relative_url }}">&larr; Back to benchmark blog</a>
+  <a class="back-link" href="{{ '/blog/' | relative_url }}" data-back-link>&larr; Back to benchmark blog</a>
   <p class="post-kicker">{{ page.date | date: "%d %B %Y" }}</p>
   <h1>{{ page.title }}</h1>
   {% if page.summary %}
@@ -12,3 +12,21 @@ layout: default
     {{ content }}
   </div>
 </article>
+
+<script>
+  (() => {
+    const labels = {
+      ner: "NER posts",
+      pii: "PII posts",
+      tone: "tone and sentiment posts"
+    };
+    const params = new URLSearchParams(window.location.search);
+    const topic = (params.get("topic") || "").toLowerCase();
+    const backLink = document.querySelector("[data-back-link]");
+
+    if (backLink && labels[topic]) {
+      backLink.href = "{{ '/blog/' | relative_url }}?topic=" + encodeURIComponent(topic);
+      backLink.textContent = "\u2190 Back to " + labels[topic];
+    }
+  })();
+</script>
