@@ -29,22 +29,22 @@ permalink: /overview/
     </thead>
     <tbody>
       <tr>
-        <td>South-Eastern Finland University of Applied Sciences</td>
+        <td><a href="https://www.xamk.fi/en/" target="_blank" rel="noopener">South-Eastern Finland University of Applied Sciences</a></td>
         <td>Lead partner</td>
         <td>🇫🇮 Finland</td>
       </tr>
       <tr>
-        <td>The National Archives of Finland</td>
+        <td><a href="https://kansallisarkisto.fi/en/frontpage" target="_blank" rel="noopener">The National Archives of Finland</a></td>
         <td>Project partner</td>
         <td>🇫🇮 Finland</td>
       </tr>
       <tr>
-        <td>National Archives of Estonia</td>
+        <td><a href="https://www.ra.ee/en/" target="_blank" rel="noopener">The National Archives of Estonia</a></td>
         <td>Project partner</td>
         <td>🇪🇪 Estonia</td>
       </tr>
       <tr>
-        <td>The National Archives of Latvia</td>
+        <td><a href="https://www.arhivi.gov.lv/en" target="_blank" rel="noopener">The National Archives of Latvia</a></td>
         <td>Project partner</td>
         <td>🇱🇻 Latvia</td>
       </tr>

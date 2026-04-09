@@ -1,5 +1,5 @@
 ---
-title: "Secondary evaluation: NER with LLMs"
+title: "NER with LLMs"
 summary: LLM-based NER is useful as a fallback and experimentation path, but current results make it slower and usually less accurate than dedicated NER models.
 track: "NER + LLM"
 track_icon: "🤖"
