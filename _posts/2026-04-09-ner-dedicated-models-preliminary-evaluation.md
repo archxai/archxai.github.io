@@ -9,7 +9,7 @@ chips:
     label: NER
   - icon: "1️⃣"
     label: Preliminary
-date: 2025-12-02 06:10:00 +0200
+date: 2025-12-31 06:10:00 +0200
 ---
 
 Named Entity Recognition (NER) is used to automatically identify key entities in text, especially **people**, **organisations**, and **locations**. In archival work, these are some of the most useful entry points for search, indexing, and access services.
