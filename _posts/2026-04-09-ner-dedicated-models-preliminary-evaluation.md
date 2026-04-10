@@ -28,10 +28,10 @@ Because the source models and datasets do not all use the same label inventory, 
 
 | Language | Best dedicated model | Dataset | F1 (%) |
 |---|---|---|---:|
-| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | `et_modern` | 75.7% |
-| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | `fi_old` | 75.2% |
-| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | `lv_diverse` | 84.1% |
-| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | `ru_modern` | 91.2% |
+| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | [`et_modern`](https://github.com/TartuNLP/EstNER) | 75.7% |
+| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | [`fi_old`](https://zenodo.org/records/4573313) | 75.2% |
+| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | [`lv_diverse`](https://github.com/LUMII-AILab/FullStack) | 84.1% |
+| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | [`ru_modern`](https://bsnlp.cs.helsinki.fi/bsnlp-2019/shared_task.html) | 91.2% |
 
 ## What the output looks like
 
