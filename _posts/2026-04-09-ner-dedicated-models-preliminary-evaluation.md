@@ -57,41 +57,23 @@ Across the local run, the dedicated-model benchmark covered the following model 
 
 ## Evaluation setup
 
-Because not all models and datasets use CoNLL-2003 or OntoNotes-style labels, the benchmark maps them to a common **PER / LOC / ORG** scheme before scoring.
-
-### Entity mapping
-
-| PER | LOC | ORG |
-|---|---|---|
-| PERSON | LOCATION | ORGANIZATION |
-| FIRST_NAME | CITY | ORGANISATION |
-| MIDDLE_NAME | COUNTRY | LOC-ORG |
-| LAST_NAME | REGION | SUBORG |
-| ACTOR | POSTAL | MEDIA |
-| DIRECTOR | DISTRICT | COMPANY |
-| MUSICIAN | HOUSE | GROUP |
-| PRODUCER | ZIP | INSTITUTION |
-|  | ADDRESS |  |
-|  | ADDR |  |
-|  | STREET |  |
-|  | GPE |  |
-|  | PLACE |  |
-|  | GEOPOLIT |  |
+Because the source models and datasets do not all use the same label inventory, the benchmark maps results to a shared **PER / LOC / ORG** scheme before scoring.
 
 ### Evaluation datasets
 
-| Name | Entities | Size | Source |
-|---|---|---:|---|
-| `et_modern.conll` | DATE, EVENT, GPE, LOC, MONEY, ORG, PER, PERCENT, PROD, TIME, TITLE | 165 947 | [EstNER](https://github.com/TartuNLP/EstNER) |
-| `et_multileg.conll` | AMOUNT_UNIT, AMOUNT_VALUE, DATE, IDNUM, LOC, NATIONALITY, ORG, PER, PROFESSION, TITLE, URL | 100 804 | [MultiLeg](https://github.com/tilde-nlp/MultiLeg-dataset/) |
-| `et_old.conll` | LOC, LOC_ORG, MISC, ORG, PER | 54 069 | [vk_ner_lrec_2022](https://github.com/soras/vk_ner_lrec_2022) |
-| `fi_multileg.conll` | AMOUNT_UNIT, AMOUNT_VALUE, DATE, IDNUM, LOC, NATIONALITY, ORG, PER, PROFESSION, TITLE, URL | 96 488 | [MultiLeg](https://github.com/tilde-nlp/MultiLeg-dataset/) |
-| `fi_old.conll` | LOC, ORG, PER | 51 839 | [Zenodo](https://zenodo.org/records/4573313) |
-| `lv_modern.conll` | FOOD, LOC, MISC, ORG, PER, TIME | 21 951 | [Latvian food NER corpus](https://github.com/RinaldsViksna/Latvian-food-NER-corpus) |
-| `lv_multileg.conll` | AMOUNT_UNIT, AMOUNT_VALUE, DATE, IDNUM, LOC, NATIONALITY, ORG, PER, PROFESSION, TITLE, URL | 110 860 | [MultiLeg](https://github.com/tilde-nlp/MultiLeg-dataset/) |
-| `lv_diverse.conll` | entity, event, GPE, location, money, organization, person, product, time | 199 155 | [FullStack](https://github.com/LUMII-AILab/FullStack) |
-| `ru_modern.conll` | EVT, LOC, ORG, PER, PRO | 47 187 | [BSNLP 2019](https://bsnlp.cs.helsinki.fi/bsnlp-2019/shared_task.html) |
-| `ru_oldish.conll` | CHAR, FAC, LOC, MISC, ORG, PER | 18 838 | [razmecheno/main](https://github.com/razmecheno/main) |
+- 🌐 Multilingual
+  - [MultiLeg legal datasets](https://github.com/tilde-nlp/MultiLeg-dataset/): `et_multileg.conll` (100 804), `fi_multileg.conll` (96 488), and `lv_multileg.conll` (110 860)
+- 🇪🇪 Estonian
+  - [`et_modern.conll`](https://github.com/TartuNLP/EstNER) (165 947)
+  - [`et_old.conll`](https://github.com/soras/vk_ner_lrec_2022) (54 069)
+- 🇫🇮 Finnish
+  - [`fi_old.conll`](https://zenodo.org/records/4573313) (51 839)
+- 🇱🇻 Latvian
+  - [`lv_modern.conll`](https://github.com/RinaldsViksna/Latvian-food-NER-corpus) (21 951)
+  - [`lv_diverse.conll`](https://github.com/LUMII-AILab/FullStack) (199 155)
+- 🪆 Russian
+  - [`ru_modern.conll`](https://bsnlp.cs.helsinki.fi/bsnlp-2019/shared_task.html) (47 187)
+  - [`ru_oldish.conll`](https://github.com/razmecheno/main) (18 838)
 
 ## Best dedicated-model results by language
 
