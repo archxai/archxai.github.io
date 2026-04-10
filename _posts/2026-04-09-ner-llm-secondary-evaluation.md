@@ -18,24 +18,31 @@ Large language models (LLMs) can also be asked to find named entities in text. I
 
 This is useful when no good dedicated model exists, or when the project wants to test a new entity definition quickly. It is less useful when millions of sentences need to be processed, because LLM extraction is much slower.
 
-## Illustration placeholder
-
-<div class="placeholder-figure">Illustration placeholder: add a simple prompt-and-answer example showing how an LLM extracts people, organisations, and places from the same archival text.</div>
-
 ## What we tested
 
-This secondary note uses the LLM results from the current NER benchmark. The models were run locally with prompt-based extraction, and the outputs were mapped to the same **PER / ORG / LOC** evaluation scheme used for dedicated NER models.
+This secondary note uses the LLM results from the current NER benchmark. The models were run locally through Ollama with prompt-based extraction, and the outputs were mapped to the same **PER / ORG / LOC** evaluation scheme used for dedicated NER models.
 
-The headline score is **F1**. The table below uses the same out-of-domain or stress-test datasets as the dedicated-model note where possible, so the two posts are easy to compare.
+The headline score is **F1**, shown below as a percentage. The table highlights the strongest result reached by the local LLM set for each language.
 
-## Best current results on out-of-domain data
+## Headline results
 
-| Language | Out-of-domain dataset | Best current LLM | Accuracy score |
+| Language | Best local LLM | Dataset | F1 (%) |
 |---|---|---|---:|
-| Estonian | `et_multileg` legal text | `gpt-oss:120b` | F1 56.0% |
-| Finnish | `fi_multileg` legal text | `qwen3:32b` | F1 44.7% |
-| Latvian | `lv_multileg` legal text | `gpt-oss:120b` | F1 54.5% |
-| Russian | `ru_oldish` older-domain mix | `gpt-oss:120b` | F1 71.0% |
+| 🇪🇪 Estonian | [`gpt-oss_120b`](https://ollama.com/library/gpt-oss) | `et_modern` | 64.6% |
+| 🇫🇮 Finnish | [`gpt-oss_120b`](https://ollama.com/library/gpt-oss) | `fi_multileg` | 50.1% |
+| 🇱🇻 Latvian | [`gpt-oss_120b`](https://ollama.com/library/gpt-oss) | `lv_diverse` | 76.9% |
+| 🪆 Russian | [`gpt-oss_120b`](https://ollama.com/library/gpt-oss) | `ru_modern` | 88.8% |
+
+## Evaluation setup
+
+### Evaluation models
+
+- [`gpt-oss_120b`](https://ollama.com/library/gpt-oss)
+- [`deepseek-r1_70b`](https://ollama.com/library/deepseek-r1)
+- [`qwen3_32b`](https://ollama.com/library/qwen3)
+- [`llama4_latest`](https://ollama.com/library/llama4)
+- [`gemma3_27b`](https://ollama.com/library/gemma3)
+- [`mistral-large_latest`](https://ollama.com/library/mistral-large)
 
 ## Early interpretation
 
@@ -45,4 +52,4 @@ The value of LLMs is different: they are flexible. They can help with targeted e
 
 ## What to update next
 
-The next useful update is to add a visual comparison between a dedicated NER pipeline and an LLM prompt workflow. The benchmark should also keep testing smaller and faster LLMs, because the operational question is not only whether LLMs can work, but whether they can work at a realistic cost.
+The next useful update is to document the prompt format and add more dataset-level detail, especially for cases where LLM extraction still misses entities that a dedicated model can capture reliably. The benchmark should also keep testing smaller and faster local models, because the operational question is not only whether LLMs can work, but whether they can work at a realistic cost.
