@@ -24,31 +24,32 @@ The first dedicated-model benchmark in ArchXAI asked a practical question: which
 
 ## What we tested
 
-This note focuses on dedicated transformer-based NER models from the December 2, 2025 comparison. The benchmark covered multilingual, Estonian, Finnish, Latvian, and Russian model candidates that could realistically be integrated into AI-based cataloguing and indexing workflows.
+This note focuses on dedicated transformer-based NER models. The benchmark covered multilingual, Estonian, Finnish, Latvian, and Russian model candidates that could realistically be integrated into AI-based cataloguing and indexing workflows.
 
 The headline score is **F1**, which balances two practical errors: marking things that are not entities, and missing entities that should have been found. Higher is better.
 
 Across the local run, the dedicated-model benchmark covered the following model set:
 
-- Multilingual and cross-language baselines: [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity), [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER), [`jplu/tf-xlm-r-ner-40-lang`](https://huggingface.co/jplu/tf-xlm-r-ner-40-lang), [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner), [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl), and [`nicolauduran45/affilgood-ner-multilingual-v2`](https://huggingface.co/nicolauduran45/affilgood-ner-multilingual-v2).
-- Finnish-oriented models: [`iguanodon-ai/bert-base-finnish-uncased-ner`](https://huggingface.co/iguanodon-ai/bert-base-finnish-uncased-ner), [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner), plus the locally referenced Turku benchmark entry `turku-combined-ext`.
-- Estonian-oriented models: [`tartuNLP/EstBERT_NER_v2`](https://huggingface.co/tartuNLP/EstBERT_NER_v2) and [`tartuNLP/est-roberta-hist-ner`](https://huggingface.co/tartuNLP/est-roberta-hist-ner).
-- Russian-oriented models: [`Gherman/bert-base-NER-Russian`](https://huggingface.co/Gherman/bert-base-NER-Russian), [`ivlcic/xlmr-ner-slavic`](https://huggingface.co/ivlcic/xlmr-ner-slavic), [`creat89/NER_FEDA_Ru`](https://huggingface.co/creat89/NER_FEDA_Ru), and [`r1char9/ner-rubert-tiny-news`](https://huggingface.co/r1char9/ner-rubert-tiny-news).
+- 🌐 Multilingual: [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity), [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER), [`jplu/tf-xlm-r-ner-40-lang`](https://huggingface.co/jplu/tf-xlm-r-ner-40-lang), [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner), [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl), and [`nicolauduran45/affilgood-ner-multilingual-v2`](https://huggingface.co/nicolauduran45/affilgood-ner-multilingual-v2).
+- 🇪🇪 Estonian: [`tartuNLP/EstBERT_NER_v2`](https://huggingface.co/tartuNLP/EstBERT_NER_v2) and [`tartuNLP/est-roberta-hist-ner`](https://huggingface.co/tartuNLP/est-roberta-hist-ner).
+- 🇫🇮 Finnish: [`iguanodon-ai/bert-base-finnish-uncased-ner`](https://huggingface.co/iguanodon-ai/bert-base-finnish-uncased-ner), [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner), and the Turku benchmark entry [`turku-combined-ext`](https://turkunlp.org/fin-ner.html).
+- 🇱🇻 Latvian: Latvian performance in this benchmark was mainly covered through the multilingual model set above, especially [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER), [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl), [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner), and [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity).
+- 🪆 Russian: [`Gherman/bert-base-NER-Russian`](https://huggingface.co/Gherman/bert-base-NER-Russian), [`ivlcic/xlmr-ner-slavic`](https://huggingface.co/ivlcic/xlmr-ner-slavic), [`creat89/NER_FEDA_Ru`](https://huggingface.co/creat89/NER_FEDA_Ru), and [`r1char9/ner-rubert-tiny-news`](https://huggingface.co/r1char9/ner-rubert-tiny-news).
 
 ## Best dedicated-model results by language
 
-| Language | Strongest result | Close second |
-|---|---|---|
-| Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) (`F1 = 0.757`) | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) (`F1 = 0.751`) |
-| Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) (`F1 = 0.752`) | - |
-| Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) (`F1 = 0.841`) | - |
-| Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) (`F1 = 0.912`) | - |
+| Language | Best dedicated model | F1 |
+|---|---|---:|
+| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.757 |
+| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | 0.752 |
+| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.841 |
+| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | 0.912 |
 
 ## Early interpretation
 
 The main engineering conclusion is still straightforward: dedicated NER models are the default choice for large-scale indexing. They are fast enough for bulk processing, and the best-performing model can be selected by language and collection type.
 
-The corrected language-level results also show that a single multilingual baseline is not always the only answer. In Estonian and Latvian, `51la5/roberta-large-NER` performed especially well, while Finnish favored `Kansallisarkisto/finbert-ner`, and Russian favored `pierre-tassel/rapido-ner-entity`.
+The language-level results also show that a single multilingual baseline is not always the only answer. In Estonian and Latvian, `51la5/roberta-large-NER` performed especially well, while Finnish favored `Kansallisarkisto/finbert-ner`, and Russian favored `pierre-tassel/rapido-ner-entity`.
 
 Operationally, transformer NER still has the clearest advantage for routine archive processing: in local runs, these models process text in milliseconds per sentence, while LLM-based extraction takes seconds per sentence and is therefore better suited to targeted enrichment or fallback use.
 
