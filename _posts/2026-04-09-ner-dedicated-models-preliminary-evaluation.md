@@ -71,7 +71,9 @@ Because the source models and datasets do not all use the same label inventory, 
 ### Evaluation datasets
 
 - 🌐 Multilingual
-  - [MultiLeg legal datasets](https://github.com/tilde-nlp/MultiLeg-dataset/): `et_multileg.conll` (100 804), `fi_multileg.conll` (96 488), and `lv_multileg.conll` (110 860)
+  - [MultiLeg legal datasets](https://github.com/tilde-nlp/MultiLeg-dataset/): `et_multileg.conll` (100 804)
+  - [MultiLeg legal datasets](https://github.com/tilde-nlp/MultiLeg-dataset/): `fi_multileg.conll` (96 488)
+  - [MultiLeg legal datasets](https://github.com/tilde-nlp/MultiLeg-dataset/): `lv_multileg.conll` (110 860)
 - 🇪🇪 Estonian
   - [`et_modern.conll`](https://github.com/TartuNLP/EstNER) (165 947)
   - [`et_old.conll`](https://github.com/soras/vk_ner_lrec_2022) (54 069)
