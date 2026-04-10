@@ -1,5 +1,5 @@
 ---
-title: "NER with LLMs"
+title: "Large Language Models for Entities?"
 summary: LLM-based NER is useful as a fallback and experimentation path, but current results make it slower and usually less accurate than dedicated NER models.
 track: "NER + LLM"
 track_icon: "🤖"

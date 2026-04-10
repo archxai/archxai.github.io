@@ -1,5 +1,5 @@
 ---
-title: "PII detection"
+title: "Personally Identifiable Information"
 summary: Presidio is the most practical default integration layer for PII detection, while MAPA remains important for Latvian legal text and anonymization workflows.
 track: PII
 track_icon: "🔐"

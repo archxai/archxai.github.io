@@ -1,5 +1,5 @@
 ---
-title: "NER with dedicated models"
+title: "Named Entity Recognition"
 summary: Dedicated NER models remain the strongest default for high-throughput archive indexing, especially when they are routed by language and text domain.
 track: NER
 track_icon: "📇"
