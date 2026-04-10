@@ -16,19 +16,32 @@ Named Entity Recognition (NER) is used to automatically identify key entities in
 
 The first dedicated-model benchmark in ArchXAI asked a practical question: which Hugging Face NER models are the strongest current candidates for multilingual archive indexing when labels are mapped to a shared **PER / ORG / LOC** scheme?
 
-## Example output
-
-<div class="media-frame">
-  <img class="content-illustration" src="{{ '/assets/images/posts/ner-model-example.png' | relative_url }}" alt="Example of named entity recognition output highlighting people, organisations, and locations across several languages">
-</div>
-
 ## What we tested
 
 This note focuses on dedicated transformer-based NER models. The benchmark covered multilingual, Estonian, Finnish, Latvian, and Russian model candidates that could realistically be integrated into AI-based cataloguing and indexing workflows.
 
 The headline score is **F1**, which balances two practical errors: marking things that are not entities, and missing entities that should have been found. Higher is better.
 
-Across the local run, the dedicated-model benchmark covered the following model set:
+Because the source models and datasets do not all use the same label inventory, the benchmark maps results to a shared **PER / LOC / ORG** scheme before scoring.
+
+## Headline results
+
+| Language | Best dedicated model | F1 |
+|---|---|---:|
+| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.757 |
+| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | 0.752 |
+| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.841 |
+| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | 0.912 |
+
+## What the output looks like
+
+<div class="media-frame">
+  <img class="content-illustration" src="{{ '/assets/images/posts/ner-model-example.png' | relative_url }}" alt="Example of named entity recognition output highlighting people, organisations, and locations across several languages">
+</div>
+
+## Evaluation setup
+
+### Evaluation models
 
 - 🌐 Multilingual
   - [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity)
@@ -55,10 +68,6 @@ Across the local run, the dedicated-model benchmark covered the following model 
   - [`creat89/NER_FEDA_Ru`](https://huggingface.co/creat89/NER_FEDA_Ru)
   - [`r1char9/ner-rubert-tiny-news`](https://huggingface.co/r1char9/ner-rubert-tiny-news)
 
-## Evaluation setup
-
-Because the source models and datasets do not all use the same label inventory, the benchmark maps results to a shared **PER / LOC / ORG** scheme before scoring.
-
 ### Evaluation datasets
 
 - 🌐 Multilingual
@@ -74,15 +83,6 @@ Because the source models and datasets do not all use the same label inventory, 
 - 🪆 Russian
   - [`ru_modern.conll`](https://bsnlp.cs.helsinki.fi/bsnlp-2019/shared_task.html) (47 187)
   - [`ru_oldish.conll`](https://github.com/razmecheno/main) (18 838)
-
-## Best dedicated-model results by language
-
-| Language | Best dedicated model | F1 |
-|---|---|---:|
-| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.757 |
-| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | 0.752 |
-| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.841 |
-| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | 0.912 |
 
 ## Early interpretation
 
