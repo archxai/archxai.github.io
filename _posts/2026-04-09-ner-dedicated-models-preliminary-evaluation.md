@@ -26,12 +26,12 @@ Because the source models and datasets do not all use the same label inventory, 
 
 ## Headline results
 
-| Language | Best dedicated model | F1 |
-|---|---|---:|
-| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.757 |
-| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | 0.752 |
-| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | 0.841 |
-| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | 0.912 |
+| Language | Best dedicated model | Dataset | F1 (%) |
+|---|---|---|---:|
+| 🇪🇪 Estonian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | `et_modern` | 75.7% |
+| 🇫🇮 Finnish | [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner) | `fi_old` | 75.2% |
+| 🇱🇻 Latvian | [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER) | `lv_diverse` | 84.1% |
+| 🪆 Russian | [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity) | `ru_modern` | 91.2% |
 
 ## What the output looks like
 
