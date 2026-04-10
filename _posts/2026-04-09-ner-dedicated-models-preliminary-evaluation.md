@@ -30,11 +30,68 @@ The headline score is **F1**, which balances two practical errors: marking thing
 
 Across the local run, the dedicated-model benchmark covered the following model set:
 
-- 🌐 Multilingual: [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity), [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER), [`jplu/tf-xlm-r-ner-40-lang`](https://huggingface.co/jplu/tf-xlm-r-ner-40-lang), [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner), [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl), and [`nicolauduran45/affilgood-ner-multilingual-v2`](https://huggingface.co/nicolauduran45/affilgood-ner-multilingual-v2).
-- 🇪🇪 Estonian: [`tartuNLP/EstBERT_NER_v2`](https://huggingface.co/tartuNLP/EstBERT_NER_v2) and [`tartuNLP/est-roberta-hist-ner`](https://huggingface.co/tartuNLP/est-roberta-hist-ner).
-- 🇫🇮 Finnish: [`iguanodon-ai/bert-base-finnish-uncased-ner`](https://huggingface.co/iguanodon-ai/bert-base-finnish-uncased-ner), [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner), and the Turku benchmark entry [`turku-combined-ext`](https://turkunlp.org/fin-ner.html).
-- 🇱🇻 Latvian: Latvian performance in this benchmark was mainly covered through the multilingual model set above, especially [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER), [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl), [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner), and [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity).
-- 🪆 Russian: [`Gherman/bert-base-NER-Russian`](https://huggingface.co/Gherman/bert-base-NER-Russian), [`ivlcic/xlmr-ner-slavic`](https://huggingface.co/ivlcic/xlmr-ner-slavic), [`creat89/NER_FEDA_Ru`](https://huggingface.co/creat89/NER_FEDA_Ru), and [`r1char9/ner-rubert-tiny-news`](https://huggingface.co/r1char9/ner-rubert-tiny-news).
+- 🌐 Multilingual
+  - [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity)
+  - [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER)
+  - [`jplu/tf-xlm-r-ner-40-lang`](https://huggingface.co/jplu/tf-xlm-r-ner-40-lang)
+  - [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner)
+  - [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl)
+  - [`nicolauduran45/affilgood-ner-multilingual-v2`](https://huggingface.co/nicolauduran45/affilgood-ner-multilingual-v2)
+- 🇪🇪 Estonian
+  - [`tartuNLP/EstBERT_NER_v2`](https://huggingface.co/tartuNLP/EstBERT_NER_v2)
+  - [`tartuNLP/est-roberta-hist-ner`](https://huggingface.co/tartuNLP/est-roberta-hist-ner)
+- 🇫🇮 Finnish
+  - [`iguanodon-ai/bert-base-finnish-uncased-ner`](https://huggingface.co/iguanodon-ai/bert-base-finnish-uncased-ner)
+  - [`Kansallisarkisto/finbert-ner`](https://huggingface.co/Kansallisarkisto/finbert-ner)
+  - [`turku-combined-ext`](https://turkunlp.org/fin-ner.html)
+- 🇱🇻 Latvian
+  - [`51la5/roberta-large-NER`](https://huggingface.co/51la5/roberta-large-NER)
+  - [`Davlan/distilbert-base-multilingual-cased-ner-hrl`](https://huggingface.co/Davlan/distilbert-base-multilingual-cased-ner-hrl)
+  - [`Babelscape/wikineural-multilingual-ner`](https://huggingface.co/Babelscape/wikineural-multilingual-ner)
+  - [`pierre-tassel/rapido-ner-entity`](https://huggingface.co/pierre-tassel/rapido-ner-entity)
+- 🪆 Russian
+  - [`Gherman/bert-base-NER-Russian`](https://huggingface.co/Gherman/bert-base-NER-Russian)
+  - [`ivlcic/xlmr-ner-slavic`](https://huggingface.co/ivlcic/xlmr-ner-slavic)
+  - [`creat89/NER_FEDA_Ru`](https://huggingface.co/creat89/NER_FEDA_Ru)
+  - [`r1char9/ner-rubert-tiny-news`](https://huggingface.co/r1char9/ner-rubert-tiny-news)
+
+## Evaluation setup
+
+Because not all models and datasets use CoNLL-2003 or OntoNotes-style labels, the benchmark maps them to a common **PER / LOC / ORG** scheme before scoring.
+
+### Entity mapping
+
+| PER | LOC | ORG |
+|---|---|---|
+| PERSON | LOCATION | ORGANIZATION |
+| FIRST_NAME | CITY | ORGANISATION |
+| MIDDLE_NAME | COUNTRY | LOC-ORG |
+| LAST_NAME | REGION | SUBORG |
+| ACTOR | POSTAL | MEDIA |
+| DIRECTOR | DISTRICT | COMPANY |
+| MUSICIAN | HOUSE | GROUP |
+| PRODUCER | ZIP | INSTITUTION |
+|  | ADDRESS |  |
+|  | ADDR |  |
+|  | STREET |  |
+|  | GPE |  |
+|  | PLACE |  |
+|  | GEOPOLIT |  |
+
+### Evaluation datasets
+
+| Name | Entities | Size | Source |
+|---|---|---:|---|
+| `et_modern.conll` | DATE, EVENT, GPE, LOC, MONEY, ORG, PER, PERCENT, PROD, TIME, TITLE | 165 947 | [EstNER](https://github.com/TartuNLP/EstNER) |
+| `et_multileg.conll` | AMOUNT_UNIT, AMOUNT_VALUE, DATE, IDNUM, LOC, NATIONALITY, ORG, PER, PROFESSION, TITLE, URL | 100 804 | [MultiLeg](https://github.com/tilde-nlp/MultiLeg-dataset/) |
+| `et_old.conll` | LOC, LOC_ORG, MISC, ORG, PER | 54 069 | [vk_ner_lrec_2022](https://github.com/soras/vk_ner_lrec_2022) |
+| `fi_multileg.conll` | AMOUNT_UNIT, AMOUNT_VALUE, DATE, IDNUM, LOC, NATIONALITY, ORG, PER, PROFESSION, TITLE, URL | 96 488 | [MultiLeg](https://github.com/tilde-nlp/MultiLeg-dataset/) |
+| `fi_old.conll` | LOC, ORG, PER | 51 839 | [Zenodo](https://zenodo.org/records/4573313) |
+| `lv_modern.conll` | FOOD, LOC, MISC, ORG, PER, TIME | 21 951 | [Latvian food NER corpus](https://github.com/RinaldsViksna/Latvian-food-NER-corpus) |
+| `lv_multileg.conll` | AMOUNT_UNIT, AMOUNT_VALUE, DATE, IDNUM, LOC, NATIONALITY, ORG, PER, PROFESSION, TITLE, URL | 110 860 | [MultiLeg](https://github.com/tilde-nlp/MultiLeg-dataset/) |
+| `lv_diverse.conll` | entity, event, GPE, location, money, organization, person, product, time | 199 155 | [FullStack](https://github.com/LUMII-AILab/FullStack) |
+| `ru_modern.conll` | EVT, LOC, ORG, PER, PRO | 47 187 | [BSNLP 2019](https://bsnlp.cs.helsinki.fi/bsnlp-2019/shared_task.html) |
+| `ru_oldish.conll` | CHAR, FAC, LOC, MISC, ORG, PER | 18 838 | [razmecheno/main](https://github.com/razmecheno/main) |
 
 ## Best dedicated-model results by language
 
