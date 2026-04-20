@@ -23,6 +23,7 @@ permalink: /blog/
     <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=ner" data-filter="ner"><span class="topic-icon">📇</span> NER</a>
     <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=pii" data-filter="pii"><span class="topic-icon">🔐</span> PII</a>
     <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=tone" data-filter="tone"><span class="topic-icon">🗣</span> Tone and sentiment</a>
+    <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=embedding" data-filter="embedding"><span class="topic-icon">🔎</span> Embedding</a>
     <a class="filter-pill" href="{{ '/blog/' | relative_url }}?topic=llm" data-filter="llm"><span class="topic-icon">🤖</span> LLM</a>
   </div>
   <div class="blog-list">
@@ -57,6 +58,7 @@ permalink: /blog/
       ner: "Showing Named Entity Recognition posts in reverse chronological order.",
       pii: "Showing PII detection posts in reverse chronological order.",
       tone: "Showing tone and sentiment posts in reverse chronological order.",
+      embedding: "Showing similarity and semantic search posts in reverse chronological order.",
       llm: "Showing large language model posts in reverse chronological order."
     };
     const params = new URLSearchParams(window.location.search);

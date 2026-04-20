@@ -26,13 +26,13 @@ permalink: /tracks/
     <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=tone">
       <p class="chip">Preliminary</p>
       <h3>🗣 Tone and Sentiment Analysis</h3>
-      <p>Initial explanation and benchmark table structure are published; scored results will be added once the out-of-domain evaluation is run.</p>
+      <p>Cross-language sentiment results are now published, with clear caveats around Estonian underperformance and a suspiciously strong Finnish score.</p>
     </a>
-    <div class="track-card">
-      <p class="chip">Planned</p>
-      <h3>Similarity and Semantic Search</h3>
-      <p>Reserved for embedding-based retrieval, vector search, and retrieval-augmented archive access experiments.</p>
-    </div>
+    <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=embedding">
+      <p class="chip">Published</p>
+      <h3>🔎 Similarity and Semantic Search</h3>
+      <p>Embedding benchmarks for multilingual similarity, paraphrase retrieval, cross-lingual search, and vector-based archive access experiments.</p>
+    </a>
     <div class="track-card">
       <p class="chip">Planned</p>
       <h3>Image Classification</h3>
