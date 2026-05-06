@@ -8,13 +8,17 @@ permalink: /blog/
 <section class="panel">
   <p class="eyebrow">Publication stream</p>
   <h1>Benchmark blog</h1>
-  <p class="lede">This page collects the current ArchXAI benchmark notes in a predictable format. Newest entries appear first, and each note starts with a short explanation before moving to the test scope, result table, interpretation, and next update.</p>
+  <p class="lede">This page is the evidence archive behind the topic pages. Newest entries appear first, and each note keeps the same predictable structure: explanation, test scope, headline result, interpretation, and next update.</p>
+  <div class="action-row">
+    <a class="button button-primary" href="{{ '/tracks/' | relative_url }}">Browse by topic</a>
+    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
+  </div>
 </section>
 
 <section class="panel">
   <div class="section-title">
     <div>
-      <h2>All posts</h2>
+      <h2>Archive</h2>
       <p data-filter-label>Listed in reverse chronological order.</p>
     </div>
   </div>

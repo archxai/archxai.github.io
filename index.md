@@ -11,11 +11,11 @@ permalink: /
       <img class="hero-logo" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
     </div>
     <div class="hero-copy">
-      <p>ArchXAI explores how AI can help archives digitize, index, search, and safely review records across languages. This site shares what we are testing, what works well, and where human review still matters.</p>
+      <p>ArchXAI explores how AI can help archives digitize, index, search, and safely review records across languages. This site now presents that work by topic first, so visitors can quickly see what is already usable, what still needs validation, and which benchmark notes support each conclusion.</p>
       <div class="action-row">
-        <a class="button button-primary" href="{{ '/overview/' | relative_url }}">About the project</a>
+        <a class="button button-primary" href="{{ '/tracks/' | relative_url }}">Explore topics</a>
+        <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse benchmark notes</a>
         <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
-        <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Benchmark blog</a>
       </div>
     </div>
   </div>
@@ -24,27 +24,90 @@ permalink: /
 <section class="panel">
   <div class="section-title">
     <div>
-      <h2>At a glance</h2>
-      <p>The current public-facing view of ArchXAI's benchmarking and tool evaluation work.</p>
+      <h2>Explore by Topic</h2>
+      <p>Use the task areas below as the main way into the site. Each topic now aims to answer a practical question first, with the benchmark notes underneath.</p>
+    </div>
+    <a class="button button-secondary" href="{{ '/tracks/' | relative_url }}">Open all topics</a>
+  </div>
+  <div class="track-grid">
+    <a class="track-card" href="{{ '/topics/ner/' | relative_url }}">
+      <p class="chip">Published</p>
+      <h3>📇 Named Entity Recognition</h3>
+      <p>Current default: dedicated transformer NER models for indexing, with LLMs kept as a slower fallback or enrichment path.</p>
+    </a>
+    <a class="track-card" href="{{ '/topics/pii/' | relative_url }}">
+      <p class="chip">Published</p>
+      <h3>🔐 PII Detection and Anonymization</h3>
+      <p>Current default: Presidio for integration workflows, with MAPA remaining valuable for review and anonymization-heavy use cases.</p>
+    </a>
+    <a class="track-card" href="{{ '/topics/tone/' | relative_url }}">
+      <p class="chip">Preliminary</p>
+      <h3>🗣 Tone and Sentiment Analysis</h3>
+      <p>Current state: scored results exist, but the Finnish and Estonian outcomes still need validation before this becomes a strong operational recommendation.</p>
+    </a>
+    <a class="track-card" href="{{ '/topics/embedding/' | relative_url }}">
+      <p class="chip">Published</p>
+      <h3>🔎 Similarity and Semantic Search</h3>
+      <p>Current default: multilingual embedding models are already usable for semantic search, with <code>Octen-Embedding-4B</code> leading the broadest recommendation.</p>
+    </a>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="section-title">
+    <div>
+      <h2>Current Recommendations at a Glance</h2>
+      <p>A fast read of what the current public evidence supports, before diving into the individual benchmark notes.</p>
+    </div>
+    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">Read methodology</a>
+  </div>
+  <div class="callout-grid">
+    <div class="callout-card">
+      <h3>📇 NER</h3>
+      <p>Use dedicated transformer NER models as the default indexing path. The strongest model should still be selected by language and collection type.</p>
+    </div>
+    <div class="callout-card">
+      <h3>🔐 PII</h3>
+      <p>Use Presidio when integration flexibility matters most, but keep MAPA in view when anonymization workflows and human review are central.</p>
+    </div>
+    <div class="callout-card">
+      <h3>🗣 Tone</h3>
+      <p>Treat tone and sentiment as exploratory. The current scores are informative, but not yet stable enough for a strong cross-language recommendation.</p>
+    </div>
+    <div class="callout-card">
+      <h3>🔎 Similarity</h3>
+      <p>Use multilingual embeddings for concept-level search. <code>Octen-Embedding-4B</code> is the broadest current default, with the best average score and lowest measured vector cost.</p>
     </div>
   </div>
-  <div class="stats-grid">
-    <div class="stat-card">
-      <h3>What ArchXAI does</h3>
-      <p>The project develops and tests AI-assisted tools that can help archives improve access to records and respond to information requests faster.</p>
+</section>
+
+<section class="panel">
+  <div class="section-title">
+    <div>
+      <h2>Recent benchmark notes</h2>
+      <p>The newest evidence notes stay visible here, but the main browsing logic now sits under Topics rather than the publication timeline alone.</p>
     </div>
-    <div class="stat-card">
-      <h3>Who it is for</h3>
-      <p>Archivists, archive users, researchers, and the wider public who benefit from better indexing, search, and multilingual access.</p>
-    </div>
-    <div class="stat-card">
-      <h3>What is published here</h3>
-      <p>Short benchmark notes, explanations of how we compare tools, and practical conclusions about what is ready for real workflows.</p>
-    </div>
-    <div class="stat-card">
-      <h3>Why it stays current</h3>
-      <p>AI tools move fast, so this site is updated continuously instead of waiting for a single static report at the end of the process.</p>
-    </div>
+    <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse blog</a>
+  </div>
+  <div class="post-grid">
+    {% for post in site.posts limit:4 %}
+      <a class="post-card" href="{{ post.url | relative_url }}">
+        {% if post.chips %}
+          <div class="chip-row">
+            {% for chip in post.chips %}
+              <span class="chip">{% if chip.icon %}<span class="topic-icon">{{ chip.icon }}</span> {% endif %}{{ chip.label }}</span>
+            {% endfor %}
+          </div>
+        {% elsif post.track %}
+          <div class="chip-row">
+            <span class="chip">{% if post.track_icon %}<span class="topic-icon">{{ post.track_icon }}</span> {% endif %}{{ post.track }}</span>
+          </div>
+        {% endif %}
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 }}</p>
+        <p class="post-meta">{{ post.date | date: "%d %B %Y" }}</p>
+      </a>
+    {% endfor %}
   </div>
 </section>
 
@@ -88,35 +151,5 @@ permalink: /
     <a class="partner-logo-link" href="https://www.arhivi.gov.lv/en" target="_blank" rel="noopener" aria-label="National Archives of Latvia">
       <img src="{{ '/assets/images/partners/nal.png' | relative_url }}" alt="National Archives of Latvia logo">
     </a>
-  </div>
-</section>
-
-<section class="panel">
-  <div class="section-title">
-    <div>
-      <h2>Recent benchmark notes</h2>
-      <p>Short updates about what has been tested and what the current results suggest.</p>
-    </div>
-    <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse blog</a>
-  </div>
-  <div class="post-grid">
-    {% for post in site.posts limit:3 %}
-      <a class="post-card" href="{{ post.url | relative_url }}">
-        {% if post.chips %}
-          <div class="chip-row">
-            {% for chip in post.chips %}
-              <span class="chip">{% if chip.icon %}<span class="topic-icon">{{ chip.icon }}</span> {% endif %}{{ chip.label }}</span>
-            {% endfor %}
-          </div>
-        {% elsif post.track %}
-          <div class="chip-row">
-            <span class="chip">{% if post.track_icon %}<span class="topic-icon">{{ post.track_icon }}</span> {% endif %}{{ post.track }}</span>
-          </div>
-        {% endif %}
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 }}</p>
-        <p class="post-meta">{{ post.date | date: "%d %B %Y" }}</p>
-      </a>
-    {% endfor %}
   </div>
 </section>
