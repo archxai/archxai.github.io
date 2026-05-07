@@ -12,6 +12,7 @@ permalink: /topics/ner/
   <div class="action-row">
     <a class="button button-primary" href="{{ '/blog/' | relative_url }}?topic=ner">View evidence notes</a>
     <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
+    <a class="button button-secondary" href="{{ '/learning-corner/' | relative_url }}">Learn the metrics</a>
   </div>
 </section>
 

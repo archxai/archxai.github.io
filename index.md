@@ -16,6 +16,7 @@ permalink: /
         <a class="button button-primary" href="{{ '/tracks/' | relative_url }}">Explore topics</a>
         <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse benchmark notes</a>
         <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
+        <a class="button button-secondary" href="{{ '/learning-corner/' | relative_url }}">Learn the metrics</a>
       </div>
     </div>
   </div>
@@ -59,7 +60,7 @@ permalink: /
       <h2>Current Recommendations at a Glance</h2>
       <p>A fast read of what the current public evidence supports, before diving into the individual benchmark notes.</p>
     </div>
-    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">Read methodology</a>
+    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">Read testing method</a>
   </div>
   <div class="callout-grid">
     <div class="callout-card">
