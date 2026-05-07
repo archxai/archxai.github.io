@@ -91,7 +91,7 @@ permalink: /
     <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse blog</a>
   </div>
   <div class="post-grid">
-    {% for post in site.posts limit:4 %}
+    {% for post in site.posts limit:3 %}
       <a class="post-card" href="{{ post.url | relative_url }}">
         {% if post.chips %}
           <div class="chip-row">
