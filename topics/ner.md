@@ -6,7 +6,7 @@ permalink: /topics/ner/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Topic brief</p>
+  <p class="eyebrow">📑 Topics</p>
   <h1>Named Entity Recognition</h1>
   <p class="lede">Named Entity Recognition is currently one of the strongest task areas on the site. The main question is no longer whether NER can work for archive indexing, but which model family is the most defensible default and where LLMs still help.</p>
   <div class="action-row">
