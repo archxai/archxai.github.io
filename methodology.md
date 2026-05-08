@@ -6,12 +6,11 @@ permalink: /methodology/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Evaluation method</p>
-  <h1>How we test tools</h1>
+  <p class="eyebrow">💻 methodology</p>
+  <h1>Evaluation methods</h1>
   <p class="lede">This page explains how ArchXAI runs tool comparisons: what we measure, what hardware constraints shape the tests, and how results move from experiments into public benchmark notes.</p>
   <div class="action-row">
-    <a class="button button-primary" href="{{ '/learning-corner/' | relative_url }}">Learn the metrics</a>
-    <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Read benchmark notes</a>
+    <a class="button button-primary" href="{{ '/learning-corner/' | relative_url }}">Metrics learning corner</a>
   </div>
 </section>
 
