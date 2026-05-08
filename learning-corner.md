@@ -6,27 +6,26 @@ permalink: /learning-corner/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Learning corner</p>
+  <p class="eyebrow">🎓 Learning corner</p>
   <h1>Evaluation metrics without a statistics background</h1>
   <p class="lede">A metric is a score that answers one specific question about how well a system is doing. Start with the kind of system you are evaluating, then choose the metric family that matches it.</p>
-  <div class="action-row">
-    <a class="button button-primary" href="{{ '/learning-corner/classification/' | relative_url }}">Classification metrics</a>
-    <a class="button button-secondary" href="{{ '/learning-corner/ranking/' | relative_url }}">Ranking metrics</a>
-    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we run tests</a>
-  </div>
 </section>
 
 <section class="panel">
-  <h2>Choose the right starting point</h2>
+  <h2>Choose the right starting point:</h2>
   <div class="track-grid">
     <a class="track-card" href="{{ '/learning-corner/classification/' | relative_url }}">
-      <p class="chip">Classification</p>
-      <h3>Precision, Recall, and F1</h3>
+      <p class="chip">🎯 Precision</p>
+      <p class="chip">🔍 Recall</p>
+      <p class="chip">⚖️ F1</p>
+      <h3>Classification</h3>
       <p>Use this path when a system decides whether something belongs to a class: cat or not cat, name or not name, sensitive or not sensitive.</p>
     </a>
     <a class="track-card" href="{{ '/learning-corner/ranking/' | relative_url }}">
-      <p class="chip">Search and ranking</p>
-      <h3>Recall@1, Spearman, and MRR@10</h3>
+      <p class="chip">🔍 Recall@1</p>
+      <p class="chip">⚔️ Spearman</p>
+      <p class="chip">🥇 MRR@10</p>
+      <h3>Search and ranking</h3>
       <p>Use this path when a system returns an ordered list: search results, similar documents, recommendations, or ranked answers.</p>
     </a>
   </div>
