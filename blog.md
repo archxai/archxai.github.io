@@ -6,8 +6,8 @@ permalink: /blog/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Publication stream</p>
-  <h1>Benchmark blog</h1>
+  <p class="eyebrow">🗓️ Development Blog</p>
+  <h1>Publication stream</h1>
   <p class="lede">This page is the evidence archive behind the topic pages. Newest entries appear first, and each note keeps the same predictable structure: explanation, test scope, headline result, interpretation, and next update.</p>
   <div class="action-row">
     <a class="button button-primary" href="{{ '/tracks/' | relative_url }}">Browse by topic</a>
