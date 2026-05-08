@@ -44,32 +44,32 @@ permalink: /learning-corner/
     </thead>
     <tbody>
       <tr>
-        <td><strong>Precision</strong></td>
+        <td>🎯<strong>Precision</strong></td>
         <td>When the system says yes, how often is it right?</td>
         <td>Avoiding false alarms.</td>
       </tr>
       <tr>
-        <td><strong>Recall</strong></td>
+        <td>🔍<strong>Recall</strong></td>
         <td>Of everything we wanted to find, how much did we find?</td>
         <td>Avoiding missed items.</td>
       </tr>
       <tr>
-        <td><strong>F1</strong></td>
+        <td>⚖️<strong>F1</strong></td>
         <td>Is the system both careful and complete?</td>
         <td>Balancing precision and recall.</td>
       </tr>
       <tr>
-        <td><strong>Recall@1</strong></td>
+        <td>🔍<strong>Recall@1</strong></td>
         <td>Was the correct item first?</td>
         <td>Strict top-result evaluation.</td>
       </tr>
       <tr>
-        <td><strong>Spearman</strong></td>
+        <td>⚔️<strong>Spearman</strong></td>
         <td>Do two rankings mostly agree?</td>
         <td>Comparing ordered lists.</td>
       </tr>
       <tr>
-        <td><strong>MRR@10</strong></td>
+        <td>🥇<strong>MRR@10</strong></td>
         <td>How high was the first correct item within the top 10?</td>
         <td>Search, recommendation, and retrieval systems.</td>
       </tr>
