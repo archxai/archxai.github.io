@@ -6,7 +6,7 @@ permalink: /topics/pii/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Topic brief</p>
+  <p class="eyebrow">📑 Topics</p>
   <h1>PII Detection and Anonymization</h1>
   <p class="lede">PII work is less about a single benchmark winner and more about workflow fit. The practical choice depends on whether the archive needs flexible backend integration, visible anonymization review, or both.</p>
   <div class="action-row">
