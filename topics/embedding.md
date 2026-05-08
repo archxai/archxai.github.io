@@ -6,7 +6,7 @@ permalink: /topics/embedding/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Topic brief</p>
+  <p class="eyebrow">📑 Topics</p>
   <h1>Similarity and Semantic Search</h1>
   <p class="lede">This topic is already moving from exploration toward deployment-oriented questions. The main issue is less whether embeddings work at all, and more which multilingual model is the safest default for archive search and where current dataset coverage is still uneven.</p>
   <div class="action-row">
