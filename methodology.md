@@ -6,7 +6,7 @@ permalink: /methodology/
 ---
 
 <section class="panel">
-  <p class="eyebrow">💻 methodology</p>
+  <p class="eyebrow">💻 Methodology</p>
   <h1>Evaluation methods</h1>
   <p class="lede">This page explains how ArchXAI runs tool comparisons: what we measure, what hardware constraints shape the tests, and how results move from experiments into public benchmark notes.</p>
   <div class="action-row">
