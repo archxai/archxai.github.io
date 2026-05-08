@@ -6,8 +6,8 @@ permalink: /tracks/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Technology landscape</p>
-  <h1>Current and planned topics</h1>
+  <p class="eyebrow">📑 Topics</p>
+  <h1>Technology landscape</h1>
   <p class="lede">This page is now the main entry point for the published benchmark topics. Each topic leads to a short landing page with the current recommendation, the main caveat, and the evidence notes behind it.</p>
 </section>
 
