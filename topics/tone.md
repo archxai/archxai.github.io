@@ -6,7 +6,7 @@ permalink: /topics/tone/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Topic brief</p>
+  <p class="eyebrow">📑 Topics</p>
   <h1>Tone and Sentiment Analysis</h1>
   <p class="lede">This is currently the most caution-heavy published topic. The benchmark now has scored results, but the task itself is still methodologically fragile for archival material and needs more validation than the other tracks.</p>
   <div class="action-row">
