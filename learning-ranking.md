@@ -6,7 +6,7 @@ permalink: /learning-corner/ranking/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Learning corner</p>
+  <p class="eyebrow">🎓 Learning corner</p>
   <h1>Ranking and retrieval metrics</h1>
   <p class="lede">Use these metrics when a system returns an ordered list: search results, similar documents, recommendations, or ranked answers.</p>
   <div class="action-row">
