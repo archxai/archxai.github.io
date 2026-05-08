@@ -6,7 +6,7 @@ permalink: /learning-corner/classification/
 ---
 
 <section class="panel">
-  <p class="eyebrow">Learning corner</p>
+  <p class="eyebrow">🎓 Learning corner</p>
   <h1>Classification metrics</h1>
   <p class="lede">Use these metrics when a system decides whether something belongs to a class: cat or not cat, name or not name, sensitive or not sensitive.</p>
   <div class="action-row">
