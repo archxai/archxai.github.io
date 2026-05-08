@@ -11,12 +11,11 @@ permalink: /
       <img class="hero-logo" src="{{ '/assets/images/archxai-logo.png' | relative_url }}" alt="Interreg Central Baltic Programme and ArchXAI project logo">
     </div>
     <div class="hero-copy">
-      <p>ArchXAI explores how AI can help archives digitize, index, search, and safely review records across languages. This site now presents that work by topic first, so visitors can quickly see what is already usable, what still needs validation, and which benchmark notes support each conclusion.</p>
+      <p>ArchXAI is a cross-border project exploring how AI can improve archive access, indexing, search, and related public services. This site is the public web version of the project's benchmarking and technology-comparison work.</p>
       <div class="action-row">
-        <a class="button button-primary" href="{{ '/tracks/' | relative_url }}">Explore topics</a>
-        <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse benchmark notes</a>
-        <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">How we test tools</a>
-        <a class="button button-secondary" href="{{ '/learning-corner/' | relative_url }}">Learn the metrics</a>
+        <a class="button button-primary" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+        <a class="button button-secondary" href="{{ '/tracks/' | relative_url }}">Explore topics</a>
+        <a class="button button-secondary" href="{{ '/learning-corner/' | relative_url }}">Learn more</a>
       </div>
     </div>
   </div>
@@ -25,61 +24,38 @@ permalink: /
 <section class="panel">
   <div class="section-title">
     <div>
-      <h2>Explore by Topic</h2>
-      <p>Use the task areas below as the main way into the site. Each topic now aims to answer a practical question first, with the benchmark notes underneath.</p>
+      <h2>Project partners</h2>
+      <p>The ArchXAI consortium brings together applied research and national archival institutions from Finland, Estonia, and Latvia.</p>
     </div>
-    <a class="button button-secondary" href="{{ '/tracks/' | relative_url }}">Open all topics</a>
   </div>
-  <div class="track-grid">
-    <a class="track-card" href="{{ '/topics/ner/' | relative_url }}">
-      <p class="chip">Published</p>
-      <h3>📇 Named Entity Recognition</h3>
-      <p>Current default: dedicated transformer NER models for indexing, with LLMs kept as a slower fallback or enrichment path.</p>
+  <div class="partner-logo-grid">
+    <a class="partner-logo-link" href="https://www.xamk.fi/en/" target="_blank" rel="noopener" aria-label="Xamk">
+      <img src="{{ '/assets/images/partners/xamk.png' | relative_url }}" alt="Xamk logo">
     </a>
-    <a class="track-card" href="{{ '/topics/pii/' | relative_url }}">
-      <p class="chip">Published</p>
-      <h3>🔐 PII Detection and Anonymization</h3>
-      <p>Current default: Presidio for integration workflows, with MAPA remaining valuable for review and anonymization-heavy use cases.</p>
+    <a class="partner-logo-link" href="https://kansallisarkisto.fi/en/frontpage" target="_blank" rel="noopener" aria-label="National Archives of Finland">
+      <img src="{{ '/assets/images/partners/naf.png' | relative_url }}" alt="National Archives of Finland logo">
     </a>
-    <a class="track-card" href="{{ '/topics/tone/' | relative_url }}">
-      <p class="chip">Preliminary</p>
-      <h3>🗣 Tone and Sentiment Analysis</h3>
-      <p>Current state: scored results exist, but the Finnish and Estonian outcomes still need validation before this becomes a strong operational recommendation.</p>
+    <a class="partner-logo-link" href="https://www.ra.ee/en/" target="_blank" rel="noopener" aria-label="National Archives of Estonia">
+      <img src="{{ '/assets/images/partners/nae.png' | relative_url }}" alt="National Archives of Estonia logo">
     </a>
-    <a class="track-card" href="{{ '/topics/embedding/' | relative_url }}">
-      <p class="chip">Published</p>
-      <h3>🔎 Similarity and Semantic Search</h3>
-      <p>Current default: multilingual embedding models are already usable for semantic search, with <code>Octen-Embedding-4B</code> leading the broadest recommendation.</p>
+    <a class="partner-logo-link" href="https://www.arhivi.gov.lv/en" target="_blank" rel="noopener" aria-label="National Archives of Latvia">
+      <img src="{{ '/assets/images/partners/nal.png' | relative_url }}" alt="National Archives of Latvia logo">
     </a>
   </div>
 </section>
 
 <section class="panel">
-  <div class="section-title">
-    <div>
-      <h2>Current Recommendations at a Glance</h2>
-      <p>A fast read of what the current public evidence supports, before diving into the individual benchmark notes.</p>
-    </div>
-    <a class="button button-secondary" href="{{ '/methodology/' | relative_url }}">Read testing method</a>
-  </div>
-  <div class="callout-grid">
-    <div class="callout-card">
-      <h3>📇 NER</h3>
-      <p>Use dedicated transformer NER models as the default indexing path. The strongest model should still be selected by language and collection type.</p>
-    </div>
-    <div class="callout-card">
-      <h3>🔐 PII</h3>
-      <p>Use Presidio when integration flexibility matters most, but keep MAPA in view when anonymization workflows and human review are central.</p>
-    </div>
-    <div class="callout-card">
-      <h3>🗣 Tone</h3>
-      <p>Treat tone and sentiment as exploratory. The current scores are informative, but not yet stable enough for a strong cross-language recommendation.</p>
-    </div>
-    <div class="callout-card">
-      <h3>🔎 Similarity</h3>
-      <p>Use multilingual embeddings for concept-level search. <code>Octen-Embedding-4B</code> is the broadest current default, with the best average score and lowest measured vector cost.</p>
-    </div>
-  </div>
+  <h2>Project summary</h2>
+  <p>The common challenge addressed by ArchXAI is improving timely access to archive collections while both archival volumes and public information requests continue to grow. The project objective is to improve public services and archival access through jointly developed AI-based solutions that make cataloguing, indexing, and information request handling faster and more usable across borders.</p>
+  <p>The project outputs described in the application are an open source AI HTR tool, an open source AI OCR tool, a tool for enhanced cataloguing and indexing, and an AI-assisted toolset for information requests. The beneficiaries are archivists, archive users, researchers, and the broader public.</p>
+  <p>Internally, the underlying material comes from the project's technology-comparison deliverable. For external readers, the purpose is simpler: we test tools, explain what they are good at, and publish useful conclusions as the evidence becomes solid enough to share.</p>
+  <p>The current publication emphasizes practical questions:</p>
+  <ul>
+    <li>Which model families are accurate enough for multilingual archival tasks?</li>
+    <li>Which approaches are fast enough for large-scale indexing?</li>
+    <li>Which tools are realistic to operate inside institutional archive environments?</li>
+    <li>Which solutions are still strong enough only for triage and review support, not for autonomous decisions?</li>
+  </ul>
 </section>
 
 <section class="panel">
@@ -115,7 +91,7 @@ permalink: /
 <section class="panel">
   <div class="section-title">
     <div>
-      <h2>Project resources</h2>
+      <h2>Where to follow the project</h2>
       <p>Follow the wider project, open models, and code outside this site.</p>
     </div>
   </div>
@@ -128,29 +104,6 @@ permalink: /
     </a>
     <a class="resource-logo-link" href="https://github.com/archxai" target="_blank" rel="noopener" aria-label="GitHub organization">
       <img src="{{ '/assets/images/resources/github.png' | relative_url }}" alt="GitHub logo">
-    </a>
-  </div>
-</section>
-
-<section class="panel">
-  <div class="section-title">
-    <div>
-      <h2>Project partners</h2>
-      <p>The ArchXAI consortium brings together applied research and national archival institutions from Finland, Estonia, and Latvia.</p>
-    </div>
-  </div>
-  <div class="partner-logo-grid">
-    <a class="partner-logo-link" href="https://www.xamk.fi/en/" target="_blank" rel="noopener" aria-label="Xamk">
-      <img src="{{ '/assets/images/partners/xamk.png' | relative_url }}" alt="Xamk logo">
-    </a>
-    <a class="partner-logo-link" href="https://kansallisarkisto.fi/en/frontpage" target="_blank" rel="noopener" aria-label="National Archives of Finland">
-      <img src="{{ '/assets/images/partners/naf.png' | relative_url }}" alt="National Archives of Finland logo">
-    </a>
-    <a class="partner-logo-link" href="https://www.ra.ee/en/" target="_blank" rel="noopener" aria-label="National Archives of Estonia">
-      <img src="{{ '/assets/images/partners/nae.png' | relative_url }}" alt="National Archives of Estonia logo">
-    </a>
-    <a class="partner-logo-link" href="https://www.arhivi.gov.lv/en" target="_blank" rel="noopener" aria-label="National Archives of Latvia">
-      <img src="{{ '/assets/images/partners/nal.png' | relative_url }}" alt="National Archives of Latvia logo">
     </a>
   </div>
 </section>
