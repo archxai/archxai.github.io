@@ -1,6 +1,6 @@
 ---
 title: "Similarity and Semantic Search"
-summary: Updated multilingual embedding results now include synthetic Latvian similarity and paraphrase data, plus latency and vector-size measurements for operational search planning.
+summary: Similarity and semantic search use embedding models to turn words, sentences, or passages into vectors so that related texts land close together in search. In archives, this matters when exact keyword matching is too brittle and users need concept-level retrieval across languages, spellings, and phrasing styles.
 track: Embedding
 track_icon: "🔎"
 topics: [embedding]
@@ -9,12 +9,8 @@ chips:
     label: Embedding
   - icon: "1️⃣"
     label: Preliminary
-date: 2026-04-20 06:40:00 +0300
+date: 2026-04-30 06:40:00 +0300
 ---
-
-Similarity and semantic search use embedding models to turn words, sentences, or passages into vectors so that related texts land close together in search. In archives, this matters when exact keyword matching is too brittle and users need concept-level retrieval across languages, spellings, and phrasing styles.
-
-This update keeps the original benchmark note date, but refreshes the evidence with the completed local run. The main change is Latvian: the earlier version relied only on FLORES cross-lingual sentence retrieval, while this update adds machine-translated Latvian versions of MultiSimLex and TAPACO. That is still imperfect, but it gives Latvian a broader task mix that is much closer to Estonian, Finnish, and Russian.
 
 ## What we tested
 
@@ -79,7 +75,7 @@ Dataset sizes in this run were:
 | FLORES | 900 aligned sentence pairs for each language pair. |
 | MR-TyDi | 6,560 Finnish and 5,366 Russian queries. |
 
-The Latvian MultiSimLex and TAPACO results should be read as a practical approximation, not as a native Latvian gold standard. They reduce the bias of the earlier FLORES-only Latvian ranking, but a future native Latvian evaluation set would still be better.
+The Latvian MultiSimLex and TAPACO results should be read as a practical approximation, not as a native Latvian gold standard. The machine translated datasets reduce the bias of the earlier FLORES-only Latvian ranking, but a future native Latvian evaluation set would still be better.
 
 ## Latency and vector cost
 
