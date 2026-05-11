@@ -20,22 +20,18 @@ permalink: /tracks/
   </div>
   <div class="track-grid">
     <a class="track-card" href="{{ '/topics/ner/' | relative_url }}">
-      <p class="chip">Published</p>
       <h3>📇 Named Entity Recognition</h3>
       <p>Default recommendation: dedicated transformer NER models for indexing, with LLMs kept as a secondary fallback and enrichment path.</p>
     </a>
     <a class="track-card" href="{{ '/topics/pii/' | relative_url }}">
-      <p class="chip">Published</p>
       <h3>🔐 PII Detection and Anonymization</h3>
       <p>Default recommendation: Presidio for integration-heavy workflows, while MAPA stays relevant for anonymization and visual review.</p>
     </a>
     <a class="track-card" href="{{ '/topics/tone/' | relative_url }}">
-      <p class="chip">Preliminary</p>
       <h3>🗣 Tone and Sentiment Analysis</h3>
       <p>Current state: scored results exist, but Estonian underperforms and Finnish still needs an explicit overlap check before stronger conclusions.</p>
     </a>
     <a class="track-card" href="{{ '/topics/embedding/' | relative_url }}">
-      <p class="chip">Published</p>
       <h3>🔎 Similarity and Semantic Search</h3>
       <p>Default recommendation: multilingual embeddings are ready for semantic search, with <code>Octen-Embedding-4B</code> currently the broadest safe default.</p>
     </a>
@@ -51,12 +47,10 @@ permalink: /tracks/
   </div>
   <div class="track-grid">
     <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=llm">
-      <p class="chip">Preliminary</p>
       <h3>🤖 Large Language and Multimodal Models</h3>
       <p>Current LLM evidence appears mainly inside the secondary NER evaluation; a broader multimodal archive workflow view is still planned.</p>
     </a>
     <div class="track-card">
-      <p class="chip">Planned</p>
       <h3>Image Classification</h3>
       <p>Reserved for visual archival classification tasks once the benchmark material is curated.</p>
     </div>
