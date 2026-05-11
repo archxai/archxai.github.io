@@ -40,6 +40,7 @@ permalink: /learning-corner/classification/
     <img class="metric-image" src="{{ '/assets/images/learning/precision-cat-detector.png' | relative_url }}" alt="Precision example showing 20 correct cat predictions and 5 false alarms among 25 predicted cats.">
   </figure>
   <div class="formula-card">
+    <code>Precision = TP / (TP + FP)</code><br>
     <code>Precision = 20 / (20 + 5) = 80%</code>
   </div>
   <p>High precision means: when the system makes a claim, users can usually trust it. This matters when false alarms are costly.</p>
@@ -52,6 +53,7 @@ permalink: /learning-corner/classification/
     <img class="metric-image" src="{{ '/assets/images/learning/recall-cat-detector.png' | relative_url }}" alt="Recall example showing 20 detected cats and 10 missed cats among 30 real cat photos.">
   </figure>
   <div class="formula-card">
+    <code>Recall = TP / (TP + FN)</code><br>
     <code>Recall = 20 / (20 + 10) = 66.7%</code>
   </div>
   <p>High recall means: the system does not miss many of the things we care about. This matters when missing an item is more harmful than reviewing an extra false alarm.</p>
@@ -64,8 +66,6 @@ permalink: /learning-corner/classification/
     <img class="metric-image" src="{{ '/assets/images/learning/f1-score-balance.png' | relative_url }}" alt="F1 score illustration balancing 80 percent precision and 66.7 percent recall to produce F1 of 72.7 percent.">
   </figure>
   <div class="formula-card">
-    <code>Precision = 20 / (20 + 5) = 80%</code><br>
-    <code>Recall = 20 / (20 + 10) = 66.7%</code><br>
     <code>F1 = 2 × (Precision × Recall) / (Precision + Recall)</code><br>
     <code>F1 = 2 × (0.80 × 0.667) / (0.80 + 0.667) = 0.727 = 72.7%</code>
   </div>
