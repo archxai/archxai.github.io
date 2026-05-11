@@ -16,7 +16,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2>Start with a cat-photo detector</h2>
+  <h2>Example Background</h2>
   <p>Imagine a system that looks at 100 photos and predicts either <strong>Cat</strong> or <strong>Not Cat</strong>. The four boxes below are the starting point for precision, recall, and F1.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/confusion-matrix-cat-detector.png' | relative_url }}" alt="Cat detector confusion matrix showing 20 detected cats, 10 missed cats, 5 false alarms, and 65 correct non-cats.">
@@ -34,7 +34,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2>Precision: when the system says yes, how often is it right?</h2>
+  <h2>Precision</h2>
   <p>Precision looks only at the items the system selected. In the cat example, the system predicted 25 photos as cats. 20 really were cats and 5 were false alarms.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/precision-cat-detector.png' | relative_url }}" alt="Precision example showing 20 correct cat predictions and 5 false alarms among 25 predicted cats.">
@@ -47,7 +47,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2>Recall: of everything we wanted to find, how much did we find?</h2>
+  <h2>Recall</h2>
   <p>Recall looks at all the truly relevant items. In the cat example, there were 30 real cats. The system found 20 and missed 10.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/recall-cat-detector.png' | relative_url }}" alt="Recall example showing 20 detected cats and 10 missed cats among 30 real cat photos.">
@@ -60,7 +60,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2>F1: a single score that balances precision and recall</h2>
+  <h2><a href="https://en.wikipedia.org/wiki/F-score">F1 Score</a></h2>
   <p>F1 combines precision and recall into one stricter balance score. It is high only when the system is both careful and complete.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/f1-score-balance.png' | relative_url }}" alt="F1 score illustration balancing 80 percent precision and 66.7 percent recall to produce F1 of 72.7 percent.">
