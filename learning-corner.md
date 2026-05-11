@@ -15,18 +15,18 @@ permalink: /learning-corner/
   <h2>Choose the right starting point:</h2>
   <div class="track-grid">
     <a class="track-card" href="{{ '/learning-corner/classification/' | relative_url }}">
+      <h3>Classification</h3>
+      <p>Use this path when a system decides whether something belongs to a class: cat or not cat, name or not name, sensitive or not sensitive.</p>
       <p class="chip">🎯 Precision</p>
       <p class="chip">🔍 Recall</p>
       <p class="chip">⚖️ F1</p>
-      <h3>Classification</h3>
-      <p>Use this path when a system decides whether something belongs to a class: cat or not cat, name or not name, sensitive or not sensitive.</p>
     </a>
     <a class="track-card" href="{{ '/learning-corner/ranking/' | relative_url }}">
+      <h3>Search and ranking</h3>
+      <p>Use this path when a system returns an ordered list: search results, similar documents, recommendations, or ranked answers.</p>
       <p class="chip">🔍 Recall@1</p>
       <p class="chip">⚔️ Spearman</p>
       <p class="chip">🥇 MRR@10</p>
-      <h3>Search and ranking</h3>
-      <p>Use this path when a system returns an ordered list: search results, similar documents, recommendations, or ranked answers.</p>
     </a>
   </div>
 </section>
