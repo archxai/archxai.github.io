@@ -34,7 +34,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2><a href="https://en.wikipedia.org/wiki/Precision_and_recall">🎯 Precision</a></h2>
+  <h2>🎯 <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision</a></h2>
   <p>Precision looks only at the items the system selected. In the cat example, the system predicted 25 photos as cats. 20 really were cats and 5 were false alarms.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/precision-cat-detector.png' | relative_url }}" alt="Precision example showing 20 correct cat predictions and 5 false alarms among 25 predicted cats.">
@@ -47,7 +47,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2><a href="https://en.wikipedia.org/wiki/Precision_and_recall">🔍 Recall</a></h2>
+  <h2>🔍 <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Recall</a></h2>
   <p>Recall looks at all the truly relevant items. In the cat example, there were 30 real cats. The system found 20 and missed 10.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/recall-cat-detector.png' | relative_url }}" alt="Recall example showing 20 detected cats and 10 missed cats among 30 real cat photos.">
@@ -60,7 +60,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2><a href="https://en.wikipedia.org/wiki/F-score">⚖️ F1 Score</a></h2>
+  <h2>⚖️ <a href="https://en.wikipedia.org/wiki/F-score">F1 Score</a></h2>
   <p>F1 combines precision and recall into one stricter balance score. It is high only when the system is both careful and complete.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/f1-score-balance.png' | relative_url }}" alt="F1 score illustration balancing 80 percent precision and 66.7 percent recall to produce F1 of 72.7 percent.">
