@@ -16,7 +16,7 @@ permalink: /learning-corner/ranking/
 </section>
 
 <section class="panel">
-  <h2>Ranked results: when position matters</h2>
+  <h2>Background</h2>
   <p>Search, recommendations, semantic retrieval, and question answering often return a ranked list. For those tasks, we care not only whether the right item appears, but how far down the list users must look.</p>
   <table>
     <thead>
@@ -73,7 +73,7 @@ permalink: /learning-corner/ranking/
 </section>
 
 <section class="panel">
-  <h2>Spearman: do two rankings mostly agree?</h2>
+  <h2>⚔️ <a href="https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient">Spearman</a></h2>
   <p>Spearman is used when the exact score matters less than the order. It asks whether two ranked lists place the same items in a similar order.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/spearman-ranking.png' | relative_url }}" alt="Spearman example comparing two movie rankings with lines connecting corresponding movies.">
@@ -103,7 +103,7 @@ permalink: /learning-corner/ranking/
 </section>
 
 <section class="panel">
-  <h2>Mean Reciprocal Rank: how far down did the user have to look?</h2>
+  <h2>🥇  <a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank">Mean Reciprocal Rank</a></h2>
   <p>Mean Reciprocal Rank, or MRR, gives more credit when the first correct result appears higher in the list. Rank 1 gets full credit. Rank 2 gets half credit. Rank 3 gets one-third credit.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/mean-reciprocal-rank.png' | relative_url }}" alt="Mean reciprocal rank chart showing that lower ranked correct answers receive less credit.">
