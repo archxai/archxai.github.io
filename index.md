@@ -62,9 +62,9 @@ permalink: /
   <div class="section-title">
     <div>
       <h2>Recent benchmark notes</h2>
-      <p>The newest evidence notes stay visible here, but the main browsing logic now sits under Topics rather than the publication timeline alone.</p>
+      <p>Find the latest news below:</p>
     </div>
-    <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Browse blog</a>
+    <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">More...</a>
   </div>
   <div class="post-grid">
     {% for post in site.posts limit:3 %}
