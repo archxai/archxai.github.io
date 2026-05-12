@@ -12,7 +12,7 @@ permalink: /methodology/
 </section>
 
 <section class="panel">
-  <h2>What we report:/h2>
+  <h2>What we report:</h2>
   <div class="callout-grid">
     <div class="callout-card">
       <h3>⭐ Quality</h3>
