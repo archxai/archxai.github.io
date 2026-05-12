@@ -16,7 +16,7 @@ permalink: /learning-corner/classification/
 </section>
 
 <section class="panel">
-  <h2>Example Background</h2>
+  <h2>Background</h2>
   <p>Imagine a system that looks at 100 photos and predicts either <strong>Cat</strong> or <strong>Not Cat</strong>. The four boxes below are the starting point for precision, recall, and F1.</p>
   <figure class="metric-figure">
     <img class="metric-image" src="{{ '/assets/images/learning/confusion-matrix-cat-detector.png' | relative_url }}" alt="Cat detector confusion matrix showing 20 detected cats, 10 missed cats, 5 false alarms, and 65 correct non-cats.">
