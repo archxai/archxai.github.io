@@ -32,7 +32,7 @@ The headline score is a composite `0-100` ranking. Each task is first min-max no
 
 | Scope | Recommended model | Composite (0-100) | Note |
 |---|---|---:|---|
-| 🌍 Overall default | [`Octen/Octen-Embedding-4B`](https://huggingface.co/Octen/Octen-Embedding-4B) | 77.51 | Best four-language average, fastest measured embedding time, and smallest vectors. |
+| 🌐 Overall default | [`Octen/Octen-Embedding-4B`](https://huggingface.co/Octen/Octen-Embedding-4B) | 77.51 | Best four-language average, fastest measured embedding time, and smallest vectors. |
 | 🇪🇪 Estonian | [`Octen/Octen-Embedding-4B`](https://huggingface.co/Octen/Octen-Embedding-4B) | 76.02 | Best Estonian composite score. |
 | 🇫🇮 Finnish | [`Octen/Octen-Embedding-8B`](https://huggingface.co/Octen/Octen-Embedding-8B) | 73.01 | Best Finnish composite score. |
 | 🇱🇻 Latvian | [`Octen/Octen-Embedding-8B-INT8`](https://huggingface.co/Octen/Octen-Embedding-8B-INT8) | 86.27 | Best Latvian composite after adding synthetic MultiSimLex and TAPACO. |
