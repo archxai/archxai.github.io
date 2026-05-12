@@ -62,7 +62,6 @@ permalink: /
   <div class="section-title">
     <div>
       <h2>Recent blog posts</h2>
-      <p>Find the latest news below.</p>
     </div>
     <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">More...</a>
   </div>
