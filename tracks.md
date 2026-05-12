@@ -20,7 +20,7 @@ permalink: /tracks/
   <div class="track-grid">
     <a class="track-card" href="{{ '/topics/ner/' | relative_url }}">
       <h3>Named Entity Recognition</h3>
-      <p>NER is used to automatically identify key entities in text, especially people, organisations, and locations.</p>
+      <p>NER is used to automatically identify key entities in text.</p>
     </a>
     <a class="track-card" href="{{ '/topics/pii/' | relative_url }}">
       <h3>Personally Identifiable Information</h3>
