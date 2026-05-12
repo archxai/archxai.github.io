@@ -13,9 +13,8 @@ permalink: /
     <div class="hero-copy">
       <p>ArchXAI is a cross-border project exploring how AI can improve archive access, indexing, search, and related public services. This site is the public web version of the project's benchmarking and technology-comparison work.</p>
       <div class="action-row">
-        <a class="button button-primary" href="{{ '/blog/' | relative_url }}">Read the blog</a>
-        <a class="button button-secondary" href="{{ '/tracks/' | relative_url }}">Explore topics</a>
-        <a class="button button-secondary" href="{{ '/learning-corner/' | relative_url }}">Learn more</a>
+        <a class="button button-primary" href="{{ '/tracks/' | relative_url }}">Explore topics</a>
+        <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">Read blog</a>
       </div>
     </div>
   </div>
