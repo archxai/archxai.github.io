@@ -61,7 +61,7 @@ permalink: /
 <section class="panel">
   <div class="section-title">
     <div>
-      <h2>Recent blog posts</h2>
+      <h2>Latest news</h2>
     </div>
     <a class="button button-secondary" href="{{ '/blog/' | relative_url }}">More...</a>
   </div>
@@ -90,7 +90,7 @@ permalink: /
 <section class="panel">
   <div class="section-title">
     <div>
-      <h2>For more</h2>
+      <h2>More information</h2>
       <p>Follow the wider project, open models, and code outside this site.</p>
     </div>
   </div>
