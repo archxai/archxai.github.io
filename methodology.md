@@ -37,8 +37,8 @@ permalink: /methodology/
   <h2>Hardware and runtime limitations</h2>
   <p>The current local benchmarking environment is centered on an NVIDIA GB10 system with CUDA support and approximately 128 GB of shared memory. This is large enough to test many modern transformer and embedding models locally, including several multi-billion-parameter models.</p>
   <p>Those resources still matter. Some models can be tested experimentally but remain expensive for routine deployment because of memory use, vector size, latency, or operational complexity. For that reason, the site treats quality scores and operational costs as separate but connected evidence.</p>
-  <div class="media-frame">
-    <img class="content-illustration" src="{{ '/assets/images/hardware-gb10.png' | relative_url }}" alt="Illustration of the GB10-based evaluation hardware used for local benchmarking">
+  <div class="media-frame media-frame--center">
+  <img class="content-illustration" src="{{ '/assets/images/hardware-gb10.png' | relative_url }}" alt="Illustration of the GB10-based evaluation hardware used for local benchmarking">
   </div>
 </section>
 
