@@ -130,6 +130,11 @@ body {
   gap: 1.5rem;
 }
 
+/* Allow a post's grid track to shrink; long code samples scroll inside it. */
+.post-page {
+  min-width: 0;
+}
+
 .hero,
 .panel,
 .post-page,

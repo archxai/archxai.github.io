@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="650" viewBox="0 0 1080 650" role="img" aria-labelledby="title desc">
+  <title id="title">TeXplorer: static delivery, local computation</title>
+  <desc id="desc">Static hosting delivers application code, runtimes and models. In the browser an editor coordinates separate NER, Python and OCR workers. Documents and image pixels remain local to these computations. Optional public lookups send selected search terms to external services.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#012f56"/></marker></defs>
+  <rect width="1080" height="650" rx="18" fill="#edf1f5"/>
+  <g font-family="Arial, sans-serif" fill="#012f56">
+    <text x="40" y="48" font-size="26" font-weight="bold">Static delivery. Local computation.</text>
+    <rect x="40" y="78" width="1000" height="82" rx="10" fill="#fff" stroke="#012f56" stroke-width="2"/>
+    <text x="65" y="111" font-size="21" font-weight="bold">Static hosting / model repositories</text>
+    <text x="65" y="141" font-size="18">Deliver application files, runtimes and the requested model — not an inference service</text>
+    <path d="M540 160V210" stroke="#012f56" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="40" y="212" width="1000" height="294" rx="10" fill="#d3d8df" stroke="#012f56" stroke-width="2"/>
+    <text x="65" y="247" font-size="22" font-weight="bold">The user's browser</text>
+    <text x="65" y="276" font-size="18">Document editor · source review · maps · timelines · people trees</text>
+    <path d="M210 292V325M540 292V325M870 292V325" stroke="#012f56" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="65" y="333" width="290" height="116" rx="8" fill="#fff" stroke="#012f56" stroke-width="2"/>
+    <rect x="395" y="333" width="290" height="116" rx="8" fill="#fff" stroke="#012f56" stroke-width="2"/>
+    <rect x="725" y="333" width="290" height="116" rx="8" fill="#fff" stroke="#012f56" stroke-width="2"/>
+    <g text-anchor="middle">
+      <text x="210" y="366" font-size="20" font-weight="bold">NER worker</text><text x="210" y="396" font-size="17">Transformers.js</text><text x="210" y="422" font-size="17">ONNX Runtime Web</text>
+      <text x="540" y="366" font-size="20" font-weight="bold">Document-logic worker</text><text x="540" y="396" font-size="17">Pyodide / shared Python</text><text x="540" y="422" font-size="17">Dates, grouping, relationships</text>
+      <text x="870" y="366" font-size="20" font-weight="bold">Image OCR worker</text><text x="870" y="396" font-size="17">ONNX Runtime Web</text><text x="870" y="422" font-size="17">Detection and transcription</text>
+    </g>
+    <text x="65" y="482" font-size="18">Inference and document processing stay on the device.</text>
+    <path d="M540 506V554" stroke="#012f56" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+    <rect x="40" y="558" width="1000" height="66" rx="10" fill="#fff5df" stroke="#a66a13" stroke-width="2"/>
+    <text x="65" y="586" font-size="19" font-weight="bold">Optional network activity is a separate boundary</text>
+    <text x="65" y="611" font-size="17">Public-source search terms, map requests and remote images — not offline-only operation</text>
+  </g>
+</svg>

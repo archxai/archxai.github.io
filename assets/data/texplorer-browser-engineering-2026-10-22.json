@@ -1,0 +1,98 @@
+{
+  "title": "TeXplorer browser engineering checks",
+  "publication_date": "2026-10-22",
+  "scope": "Curated transcription of existing local timing reports, not a new experiment or an archival NER accuracy benchmark.",
+  "host": "NVIDIA GB10; headless Chromium; locally served application and model assets",
+  "timing": "NER worker processing milliseconds, including tokenisation, model execution and decoding; warmed long-fixture runs. Excludes model loading, network downloads, OCR, Python postprocessing and UI rendering.",
+  "fixtures": "Fixed repeated snippets: roughly 2,000 Finnish characters and 1,500 Estonian characters. Run label: long.",
+  "caveats": [
+    "The single-thread baseline was measured without cross-origin isolation; the four-thread condition was measured in separate isolated runs.",
+    "These are small engineering checks, not randomized performance trials or promised laptop timings.",
+    "The ten-thread measurements show substantial run-to-run variation.",
+    "Provider agreement and general model accuracy must be evaluated separately."
+  ],
+  "reports": [
+    {
+      "source_report": "gpu-benchmark-chromium-fi.json",
+      "checkpoint": "Kansallisarkisto/finbert-ner",
+      "dtype": "q8",
+      "provider": "wasm",
+      "cross_origin_isolated": false,
+      "threads": 1,
+      "threads_basis": "Single-thread fallback without isolation; older report does not contain an explicit threads field.",
+      "inference_ms": [1684, 1683, 1682],
+      "median_ms": 1683
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-et.json",
+      "checkpoint": "51la5/roberta-large-NER",
+      "dtype": "q8",
+      "provider": "wasm",
+      "cross_origin_isolated": false,
+      "threads": 1,
+      "threads_basis": "Single-thread fallback without isolation; older report does not contain an explicit threads field.",
+      "inference_ms": [4404, 4401, 4402],
+      "median_ms": 4402
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-fi-isolated.json",
+      "checkpoint": "Kansallisarkisto/finbert-ner",
+      "dtype": "q8",
+      "provider": "wasm",
+      "cross_origin_isolated": true,
+      "threads": 4,
+      "inference_ms": [467, 463, 461],
+      "median_ms": 463
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-et-isolated.json",
+      "checkpoint": "51la5/roberta-large-NER",
+      "dtype": "q8",
+      "provider": "wasm",
+      "cross_origin_isolated": true,
+      "threads": 4,
+      "inference_ms": [1221, 1215, 1216],
+      "median_ms": 1216
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-fi-isolated.json",
+      "checkpoint": "Kansallisarkisto/finbert-ner",
+      "dtype": "q8",
+      "provider": "webgpu",
+      "cross_origin_isolated": true,
+      "threads": 4,
+      "inference_ms": [1205, 1213, 1235],
+      "median_ms": 1213
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-et-isolated.json",
+      "checkpoint": "51la5/roberta-large-NER",
+      "dtype": "q8",
+      "provider": "webgpu",
+      "cross_origin_isolated": true,
+      "threads": 4,
+      "inference_ms": [2479, 2381, 2334],
+      "median_ms": 2381
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-fi-isolated-threads4.json",
+      "checkpoint": "Kansallisarkisto/finbert-ner",
+      "dtype": "q8",
+      "provider": "wasm",
+      "cross_origin_isolated": true,
+      "threads": 4,
+      "inference_ms": [470, 467, 464],
+      "median_ms": 467
+    },
+    {
+      "source_report": "gpu-benchmark-chromium-fi-isolated-threads10.json",
+      "checkpoint": "Kansallisarkisto/finbert-ner",
+      "dtype": "q8",
+      "provider": "wasm",
+      "cross_origin_isolated": true,
+      "threads": 10,
+      "inference_ms": [534, 354, 230],
+      "median_ms": 354
+    }
+  ]
+}
