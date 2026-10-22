@@ -235,6 +235,10 @@ h3 {
   margin: 2rem 0;
 }
 
+.demo-figure {
+  margin-inline: 0;
+}
+
 .content-illustration {
   display: block;
   width: auto;

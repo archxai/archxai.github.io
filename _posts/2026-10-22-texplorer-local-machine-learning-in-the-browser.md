@@ -26,7 +26,7 @@ The answer turned out to be considerably more than we expected. It also required
 
 ## What changed at Hugging Face
 
-There is an important distinction behind the pricing story. At the time of writing, Hugging Face documents a subscription requirement for creating Gradio or Docker Spaces on **CPU Basic**: PRO for individual accounts, or Team/Enterprise for organisations. The hardware itself still has no hourly charge. Other routes, including paid hardware and limited personal-account ZeroGPU access, have their own conditions. [The current Space-management guide explains the distinction.](https://huggingface.co/docs/huggingface_hub/main/guides/manage-spaces)
+There is an important distinction behind the pricing story. At the time of writing, Hugging Face documents a subscription requirement for creating Gradio or Docker Spaces on **CPU Basic**: PRO for individual accounts, or Team/Enterprise for organisations. The hardware itself still has no hourly charge. Other routes, including paid hardware and limited personal-account ZeroGPU access, have their own conditions. Start with [Hugging Face's pricing page](https://huggingface.co/pricing) for current plans; the [Space-management guide](https://huggingface.co/docs/huggingface_hub/main/guides/manage-spaces) explains the CPU Basic creation requirement.
 
 [Static HTML Spaces remain free](https://huggingface.co/docs/hub/spaces-sdks-static). They serve files without running our own Python application server.
 
@@ -59,6 +59,13 @@ Workers keep heavy computation away from the interface's main thread. They do no
 Free hosting does not make computation free: visitors supply the CPU time, memory, bandwidth, and energy. That makes modest-device testing part of the architecture, not an optional finishing touch.
 
 This is still a development prototype, not a claim that the complete Gradio application has been reproduced. We deliberately left out summarisation, embedded semantic search, and the spaCy experiments from this browser version.
+
+<figure class="demo-figure">
+  <div class="media-frame media-frame--center">
+    <img class="content-illustration" src="{{ '/assets/images/texplorer-document-split-view.png' | relative_url }}" alt="TeXplorer shows editable text and highlighted people, organisations, places and dates on the left, with the original scanned page and detected line outlines on the right." width="969" height="1298" loading="lazy">
+  </div>
+  <figcaption>The split document view in the demo recording: predictions remain visible alongside the original scan, rather than replacing the source. <a href="{{ '/assets/images/texplorer-document-split-view.png' | relative_url }}">View full-size screenshot.</a></figcaption>
+</figure>
 
 ## ONNX was a compatibility requirement, not a hosting rule
 
@@ -157,6 +164,13 @@ Local inference has a real advantage for archival work: the document does not ha
 
 The first visit downloads application and model files. Public-source lookups send the selected name or lookup terms to the chosen service. Maps and remote images also make requests. Caching can reduce later downloads, but this is not a promise that the complete application works offline.
 
+<figure class="demo-figure">
+  <div class="media-frame media-frame--center">
+    <img class="content-illustration" src="{{ '/assets/images/texplorer-source-comparison.png' | relative_url }}" alt="A source comparison for Anton Hansen-Tammsaare places document evidence beside Wikidata and Open Library candidates, dates, an image, and source-specific scores." width="969" height="1115" loading="lazy">
+  </div>
+  <figcaption>Document evidence and external candidates are kept in separate columns for review. The displayed scores are source-specific ranking aids, not identity probabilities. Still from the supplied recording. <a href="{{ '/assets/images/texplorer-source-comparison.png' | relative_url }}">View full-size screenshot.</a></figcaption>
+</figure>
+
 We learned to test **browser access**, not just whether a public website opens. CORS restrictions prevented several otherwise useful services from becoming direct lookup providers. A server-side `requests.get()` succeeding does not prove that a browser can read the same response. We should not silently introduce a third-party proxy and send archival names through it just to make the feature appear to work.
 
 Private Spaces added another lesson: an authenticated HTML page does not guarantee that its JavaScript, workers, models, and images can all load when third-party cookies are blocked. We had to check those assets individually, keep access signatures on the Space's own origin, and verify that they never reached external services.
@@ -173,11 +187,18 @@ The pipeline still needed the right character dictionary, channel order, crop ge
 
 Users can compare the original image with the editable transcription, hover over text-line outlines to find the corresponding text, and see a line preview while recognition runs. This makes uncertainty inspectable. Complex layouts and difficult historical handwriting still need evaluation; successful execution of synthetic samples is not proof of archival transcription quality. Finnish/Swedish OCR also does not imply that we have added Swedish NER.
 
+<figure class="demo-figure">
+  <div class="media-frame media-frame--center">
+    <img class="content-illustration" src="{{ '/assets/images/texplorer-ocr-line-preview.png' | relative_url }}" alt="The import dialog displays Recognising image line 15 of 35, a progress bar, a cropped line from the scan and a Cancel button." width="480" height="286" loading="lazy">
+  </div>
+  <figcaption>A line preview makes a longer OCR operation inspectable while it runs. Cropped still from the same demo recording; not a recognition-speed benchmark. <a href="{{ '/assets/images/texplorer-ocr-line-preview.png' | relative_url }}">View full-size screenshot.</a></figcaption>
+</figure>
+
 ## What we can claim, and what comes next
 
 We have exercised the real NER models in all four document languages and the OCR models in Chromium and Firefox. Separate controlled UI tests cover source offsets, editing, merging, source acceptance, image overlays, and responsive layouts. These checks help catch implementation failures; they do not replace accuracy evaluation on representative archival documents.
 
-The [TeXplorer development Space](https://huggingface.co/spaces/Rahvusarhiiv/ArchXAI_TeXplorer_Demo) is currently private. This article is an engineering report, not a public launch announcement. Redistribution and licensing review remains necessary before publishing the complete application and its bundled assets; in particular, availability of a checkpoint on the Hub is not itself a redistribution licence.
+The [TeXplorer demo is now public and available to try](https://huggingface.co/spaces/Rahvusarhiiv/ArchXAI_TeXplorer_Demo). It remains an experimental preview: public access is not a claim of production readiness or verified extraction accuracy. Model and source assets retain their own licensing conditions; availability of a checkpoint on the Hub is not itself a redistribution licence. The screenshots above are stills from the demo recording supplied for this post, rather than additional benchmark results.
 
 Our next priorities are representative laptop and mobile measurements, broader archive-domain accuracy checks after conversion and chunking, and continued review of model and source licences. A dedicated server remains useful when users need uniform performance, very large documents, private back-end credentials, or institutional batch processing.
 
