@@ -1,14 +1,7 @@
 ---
 title: "Similarity and Semantic Search"
 summary: Similarity and semantic search use embedding models to turn words, sentences, or passages into vectors so that related texts land close together in search. In archives, this matters when exact keyword matching is too brittle and users need concept-level retrieval across languages, spellings, and phrasing styles.
-track: Embedding
-track_icon: "🔎"
 topics: [embedding]
-chips:
-  - icon: "🔎"
-    label: Embedding
-  - icon: "1️⃣"
-    label: Preliminary
 date: 2026-04-30 06:40:00 +0300
 ---
 

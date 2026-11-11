@@ -1,0 +1,10 @@
+{% if include.topics and include.topics.size > 0 %}
+  <div class="chip-row{% if include.class %} {{ include.class | escape }}{% endif %}">
+    {% for topic_id in include.topics %}
+      {% assign topic = site.data.topics | where: 'id', topic_id | first %}
+      {% if topic %}
+        <span class="chip"><span class="topic-icon">{{ topic.icon }}</span> {{ topic.chip_label | default: topic.title | escape }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

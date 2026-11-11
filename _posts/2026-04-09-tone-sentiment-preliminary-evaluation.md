@@ -1,14 +1,7 @@
 ---
 title: "Tone and sentiment analysis"
 summary: Tone and sentiment analysis may help classify document style or attitude, but the current cross-language results need careful interpretation.
-track: Tone
-track_icon: "🗣"
 topics: [tone]
-chips:
-  - icon: "🗣"
-    label: Tone
-  - icon: "1️⃣"
-    label: Preliminary
 date: 2026-03-31 06:30:00 +0300
 ---
 

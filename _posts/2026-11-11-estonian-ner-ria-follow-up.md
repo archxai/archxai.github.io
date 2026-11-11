@@ -1,14 +1,7 @@
 ---
 title: "Estonian NER Follow-up: Testing Two RIA Models"
 summary: "Two RIA/Bürokratt models showed useful category-specific strengths, but neither displaced our previously tested multilingual model as the general Estonian default."
-track: NER
-track_icon: "📇"
 topics: [ner]
-chips:
-  - icon: "📇"
-    label: NER
-  - icon: "🔬"
-    label: Benchmark follow-up
 date: 2026-11-11 00:00:00 +0200
 ---
 

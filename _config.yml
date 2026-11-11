@@ -20,6 +20,7 @@ defaults:
       layout: post
 
 exclude:
+  - scripts
   - README.md
   - Gemfile
   - Gemfile.lock

@@ -34,6 +34,10 @@ permalink: /tracks/
       <h3>Embedding</h3>
       <p>Turn words, sentences, or passages into vectors for similarity and semantic search.</p>
     </a>
+    <a class="track-card" href="{{ '/blog/' | relative_url }}?topic=summarisation">
+      <h3>🗜️ Summarisation</h3>
+      <p>Training and evaluating grounded summaries for archival texts in four languages.</p>
+    </a>
   </div>
 </section>
 

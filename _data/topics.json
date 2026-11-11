@@ -1,0 +1,8 @@
+[
+  {"id":"ner","title":"NER","icon":"📇","description":"Showing Named Entity Recognition posts in reverse chronological order.","back_label":"NER posts"},
+  {"id":"pii","title":"PII","icon":"🔐","description":"Showing PII detection posts in reverse chronological order.","back_label":"PII posts"},
+  {"id":"tone","title":"Tone and sentiment","chip_label":"Tone","icon":"🗣","description":"Showing tone and sentiment posts in reverse chronological order.","back_label":"tone and sentiment posts"},
+  {"id":"embedding","title":"Embedding","icon":"🔎","description":"Showing similarity and semantic search posts in reverse chronological order.","back_label":"similarity and semantic search posts"},
+  {"id":"llm","title":"LLM","icon":"🤖","description":"Showing large language model posts in reverse chronological order.","back_label":"LLM posts"},
+  {"id":"summarisation","title":"Summarisation","icon":"🗜️","description":"Showing summarisation posts in reverse chronological order.","back_label":"summarisation posts"}
+]

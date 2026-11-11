@@ -1,14 +1,7 @@
 ---
 title: "Personally Identifiable Information"
 summary: Presidio is the most practical default integration layer for PII detection, while MAPA remains valuable when anonymization and visual review matter most.
-track: PII
-track_icon: "🔐"
 topics: [pii]
-chips:
-  - icon: "🔐"
-    label: PII
-  - icon: "1️⃣"
-    label: Preliminary
 date: 2026-02-27 06:20:00 +0200
 ---
 

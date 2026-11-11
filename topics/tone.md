@@ -55,13 +55,7 @@ permalink: /topics/tone/
     {% for post in site.posts %}
       {% if post.topics contains topic_name %}
         <a class="post-card" href="{{ post.url | relative_url }}?topic=tone">
-          {% if post.chips %}
-            <div class="chip-row">
-              {% for chip in post.chips %}
-                <span class="chip">{% if chip.icon %}<span class="topic-icon">{{ chip.icon }}</span> {% endif %}{{ chip.label }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
+          {% include topic-chips.html topics=post.topics %}
           <h3>{{ post.title }}</h3>
           <p>{{ post.summary | strip_html | truncate: 180 }}</p>
           <p class="post-meta">{{ post.date | date: "%d %B %Y" }}</p>

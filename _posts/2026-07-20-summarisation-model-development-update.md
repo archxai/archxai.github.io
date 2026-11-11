@@ -1,16 +1,7 @@
 ---
 title: "What We Learned Training Summarisation Models in Four Languages"
 summary: "Training useful summarisation models required more than adding data: factual support, domain balance, protected benchmarks, and qualitative review determined which updates were actually released."
-track: Summarisation
-track_icon: "📝"
-topics: [summarisation, model-training, evaluation]
-chips:
-  - icon: "📝"
-    label: Summarisation
-  - icon: "🧪"
-    label: Model training
-  - icon: "2️⃣"
-    label: Follow-up
+topics: [summarisation]
 date: 2026-07-20 06:40:00 +0300
 ---
 

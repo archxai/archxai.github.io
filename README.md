@@ -37,6 +37,12 @@ For a project site later, change `baseurl` to `"/<repo-name>"`.
 
 ## Local preview
 
+Post labels, icons and blog filters share `_data/topics.json`. Set only
+`topics: [ner, pii]` (or another listed category) in post front matter; do not
+add separate `chips`, `track` or `track_icon` fields. This keeps labels filterable
+on the blog, home page, topic pages and post headers. Summarisation uses 🗜️.
+Run `python3 scripts/check_topics.py` before publishing; Pages CI runs it too.
+
 If Ruby and Bundler are installed:
 
 ```bash

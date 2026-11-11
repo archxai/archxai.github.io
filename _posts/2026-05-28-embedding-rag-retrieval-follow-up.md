@@ -1,14 +1,7 @@
 ---
 title: "Embedding Search Meets Archive RAG"
 summary: Follow-up RAG-style tests show that dense embeddings are useful for semantic paraphrase search, but archival retrieval needs lexical, structured, and hybrid search as well.
-track: Embedding
-track_icon: "🔎"
 topics: [embedding]
-chips:
-  - icon: "🔎"
-    label: Embedding
-  - icon: "2️⃣"
-    label: Secondary
 date: 2026-05-30 00:00:00 +0300
 ---
 

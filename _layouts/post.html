@@ -4,13 +4,7 @@ layout: default
 <article class="post-page">
   <a class="back-link" href="{{ '/blog/' | relative_url }}" data-back-link>&larr; Back to benchmark blog</a>
   <p class="post-kicker">{{ page.date | date: "%d %B %Y" }}</p>
-  {% if page.chips %}
-    <div class="chip-row post-heading-chips">
-      {% for chip in page.chips %}
-        <span class="chip">{% if chip.icon %}<span class="topic-icon">{{ chip.icon }}</span> {% endif %}{{ chip.label }}</span>
-      {% endfor %}
-    </div>
-  {% endif %}
+  {% include topic-chips.html topics=page.topics class="post-heading-chips" %}
   <h1>{{ page.title }}</h1>
   {% if page.summary %}
     <p class="lede">{{ page.summary }}</p>
@@ -23,17 +17,14 @@ layout: default
 <script>
   (() => {
     const labels = {
-      ner: "NER posts",
-      pii: "PII posts",
-      tone: "tone and sentiment posts",
-      embedding: "similarity and semantic search posts",
-      llm: "LLM posts"
+      {% for topic in site.data.topics %}{{ topic.id | jsonify }}: {{ topic.back_label | jsonify }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
     };
     const params = new URLSearchParams(window.location.search);
     const topic = (params.get("topic") || "").toLowerCase();
     const backLink = document.querySelector("[data-back-link]");
 
-    if (backLink && labels[topic]) {
+    if (backLink && Object.hasOwn(labels, topic)) {
       backLink.href = "{{ '/blog/' | relative_url }}?topic=" + encodeURIComponent(topic);
       backLink.textContent = "\u2190 Back to " + labels[topic];
     }

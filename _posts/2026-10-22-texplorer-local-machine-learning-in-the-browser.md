@@ -1,16 +1,7 @@
 ---
 title: "From a Hosting Constraint to a Local Web App: TeXplorer in the Browser"
 summary: "Hugging Face's Spaces pricing changes led us from a Python demo to browser-side machine learning. Here is what we learned about Transformers.js, ONNX, quantisation, threading, storage, and keeping archival evidence inspectable."
-track: Browser deployment
-track_icon: "🌐"
-topics: [ner, browser-ml, deployment, ocr]
-chips:
-  - icon: "🌐"
-    label: Browser ML
-  - icon: "📇"
-    label: NER
-  - icon: "🛠️"
-    label: Development diary
+topics: [ner, pii]
 date: 2026-10-22 09:00:00 +0300
 ---
 
